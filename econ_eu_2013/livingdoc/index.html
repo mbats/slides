@@ -48,12 +48,18 @@
 					<p>
 						Write once...and never look at again
 					</p>
+					<p>
+						<b>Discours:</b> What good is a functional test if when you change it you cannot retrieve which scenario/requirement should be updated?
+					</p>
 				</section>
 
 				<section>
 					<h2>The theory</h2>
 					<p>
 						Continue to evolve to get a consistent documentation
+					</p>
+					<p>
+						<b>Discours:</b> Make doc & tests evolve hand in hand. NOT SAME LIFECYCLE, but tools to cross-link & synchronize.
 					</p>
 				</section>
 
@@ -126,7 +132,7 @@
 				<section>
 					<h2>Living documentation</h2>
 					<p>
-						Keep documentation up-to-date
+						Keep doc, code & tests up-to-date
 					</p>
 
 				</section>
@@ -151,74 +157,104 @@
 				<section>
 					<h2>Why yet another solution ?</h2>
 					<ul>
-						<li>Anyone can participate to documentation</li>
-						<li>Link tests to specification</li>
-						<li>Generate any kind of tests structure</li>
-						<li>Ability to synchronize any kind of artifacts</li>
-						<li>We are tool provider</li>
+						<li>Functional users should be able to write scenarios</li>						
+						<li>Generate java code from test specifications</li>						
+						<li>Link documentation with other artifacts (java code, models...)</li>
+						<li>Know when documentation or tests should be updated</li>
+						<li>(est-ce vraiment un argument?)We are tool providers</li>
+					
 					</ul>
 				</section>
 
 				<section>
-					<h2>Participate</h2>
+					<h2>Mylyn Intent: keep your doc synchronized</h2>
 					<p>
-						Use a business readable syntax for specification mixed with natural language
-					</p>
-					<p>
-						We are used to work with Textile in Intent
-					</p>
-				</section>
-				<section>
-					<h2>Intent, the origins</h2>
-					<p>
-						Blablabla :)
+						<ul>
+							<li> Part of the Eclipse Release Train since Juno (under Mylyn Docs)</li>
+							<li> To keep your doc synchronized with your software: outdated doc is useless</li>
+						</ul>
 					</p>
 				</section>
 				<section>
-					<h2>Intent = documentation editor</h2>
+					<h2>Mylyn Intent: basic idea</h2>
 					<p>
-						Demo : edit textile UML Designer spec to add a new feature
+						Instead of... One single Intent doc
 					</p>
 				</section>
 				<section>
-					<h2>Specification = tests</h2>
+					<h2>Living Doc Demo: doc edition</h2>
 					<p>
-						Need to introduce a simple new syntax for executable specification, easy to take in hand: Gerkhin
+						<ul>
+							<li>Loading off your brain (only see doc parts you need)</li>
+							<li>Customizable</li>
+							<li>Textile syntax (completion)</li>
+						</ul>
 					</p>
 				</section>
 				<section>
-					<h2>Gerkhin/Intent = executable specification editor</h2>
-					<p>
-						Demo : Add gerkhin scenario in spec to test the new feature
-					</p>
+					<h2>Living Doc Demo: defining Scenarios</h2>
+						<ul>
+							<li>Simple syntax for executable specs (Gerkhin)</li>
+							<li>Living doc bridge for Intent: provides completion, parsing & custom behavior</li>
+							<li>Cross-link capabilites</li>
+						</ul>
 				</section>
 				<section>
-					<h2>Unit tests, UI tests...</h2>
-					<p>
-						Use documentation to generate test code structure
-					</p>
+					<h2>Living Doc Demo: toward executable scenarios</h2>
+						<p>
+						From the specification, the Living Doc bridge:
+						<ul>							
+							<li>creates links from doc to tests (warning if not exists)</li>
+							<li>parse a Specification model out of documentation</li>
+						</ul>
+						</p>
+						<p>
+							Time to generate the tests out of the specifications
+						</p>
 				</section>
 				<section>
-					<h2>Generate tests</h2>
-					<p>
-						Demo : Add @unit annotation in spec and generate tests
-					</p>
+					<h2>Living Doc Demo: generating tests</h2>
+						<ul>
+							Use documentation to generate test code structure
+						</ul>
 				</section>
+				<section>
+					<h2>Living Doc Demo: cross-linked documentation</h2>					
+						<ul>							
+							<li>Hyperlinks to navigate from doc to code</li>
+							<li>Quick-outline to retrieve doc parts related to a specific artifact</li>
+						</ul>
+				</section>
+				<section>
+					<h2>Living Doc Demo: advanced validation</h2>					
+						<ul>							
+							<li>Custom validation rules</li>
+							<li>Custom quick-fixes</li>
+						</ul>
+				</section>
+				<section>
+					<h2>Living Doc Demo: it's alive!</h2>					
+						<ul>							
+							<li>Drag and drop elements</li>
+							<li>Extensible synchronization: java/C++ classes, models, MANIFEST.MF, Jira issues...</li>
+							<li>If you modify a test, update the corresponding scenario (or do not modify it)</li>
+							<li>If you modify the specification, update the corresponding test (or do not modify it)</li>
+						</ul>
+				</section>
+				<section>
+					<h2>Living Doc Demo: share the documentation</h2>					
+						<ul>							
+							Doc export ?
+						</ul>
+				</section>			
+				
 				<section>
 					<h2>Alive, it's alive!</h2>
 					<p>
-						Synchronize documentation with the code and all the existing project artifacts
-					</p>
-				</section>
-				<section>
-					<h2>Intent = detect modifications in doc and in artifacts</h2>
-					<p>
-						Demo : 
-						<ul>
-							<li>Update the feature in doc and view the synchronization errors in code & tests</li>
-							<li>Update the code and view the synchronization errors in doc & tests</li>
-							<li>Update the odesign and view the synchronization errors in doc & code & tests</li>
-						</ul>
+						<li>Functional users can write scenarios</li>						
+						<li>Generate java code from test specifications</li>						
+						<li>Link documentation with other artifacts (java code, models...)</li>
+						<li>Know when documentation or tests should be updated</li>
 					</p>
 				</section>
 
