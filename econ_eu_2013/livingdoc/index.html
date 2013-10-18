@@ -16,6 +16,7 @@
 
 		<link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/custo.css">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -37,30 +38,34 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Living Documentation</h1>
+					<h1>Living Documentation</h1>					
 					<p>
 						<small>Alex Lagarde, Mélanie Bats / Obeo</small>
 					</p>
+					<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:650px"/>
 				</section>
 
 				<section>
+					<aside class="notes">
+					MEB : What good is a functional test if when you change it you cannot retrieve which scenario/requirement should be updated?
+					</aside>
 					<h2>The reality</h2>
 					<p>
 						Write once...and never look at again
 					</p>
-					<p>
-						<b>Discours:</b> What good is a functional test if when you change it you cannot retrieve which scenario/requirement should be updated?
-					</p>
+					<img class="reflectImg" src="img/wasted_paper.jpg" style="border:0px solid black;width:600px"/>
 				</section>
 
 				<section>
+					<aside class="notes">
+					MEB :  Make doc & tests evolve hand in hand. NOT SAME LIFECYCLE, but tools to cross-link & synchronize.
+					</aside>
 					<h2>The theory</h2>
 					<p>
 						Continue to evolve to get a consistent documentation
 					</p>
-					<p>
-						<b>Discours:</b> Make doc & tests evolve hand in hand. NOT SAME LIFECYCLE, but tools to cross-link & synchronize.
-					</p>
+					<!-- arrow circle -->
+					<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:600px"/>
 				</section>
 
 				<section>
@@ -92,6 +97,7 @@
 					<p>
 						into human-focused documentation
 					</p>
+					<img class="reflectImg" src="img/robot_to_human.jpeg" style="border:0px solid black;width:600px"/>
 				</section>
 
 				
@@ -118,6 +124,8 @@
 					<p>
 						Executable specification
 					</p>
+					<!-- personn -->
+					<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:650px"/>
 				</section>
 				<section>
 					<h2>BDD</h2>
@@ -167,40 +175,237 @@
 				</section>
 
 				<section>
-					<h2>Mylyn Intent: keep your doc synchronized</h2>
-					<p>
-						<ul>
-							<li> Part of the Eclipse Release Train since Juno (under Mylyn Docs)</li>
-							<li> To keep your doc synchronized with your software: outdated doc is useless</li>
+					<aside class="notes">
+						We decided to create the Intent project because we realized that most of software documentation is outdated (i.e. contains 
+						information that does not reflect the latest state of the software). And outdated documentation is worse than no documentation at all:
+						although you spent a lot of time and effort trying to document your software, now your doc can mislead the reader. 
+						Sooner or later, no one will read your documentation anymore and hence it will become useless.<br/>
+						Then we asked oursleves: why is documentation so often outdated? Well this is the inconvenient truth about documentation: 
+						updating it is a burden. When you make a modification on the code, how many of you take the time to browse through the hundred
+						of pages of documentation just to find out the little documentation parts to need to be updated, and check for the whole doc 
+						consistency afteward? No one, and that's how documentation gets unsynchronized.<br/>
+						How come, in 2013, performing a task as simple as updating documentation when the code changes is so 
+						painful and error-prone?<br/>		
+					</aside>
+					<h2>Mylyn Intent: origins</h2>
+					<p>		
+						Outdated doc is useless (or worse)...<br/>
+						Documentation update is a burden...<br/>
+						<img src="img/intent_doc_monster.png" class="reflectImg" style="border:0px solid black;width:450px;"/>
+						<br/>
+						
+					</p>
+				</section>
+				<section>
+					<aside class="notes">						
+						That is exactly why we created Mylyn Intent: to provide tooling for keeping your documentation up-to-date whith the changes you made on
+						your software. <br/>
+						In a nutshell, Intent Mylyn Intent is a documentation environment integrated to the Eclipse IDE. Providing tooling for 
+						keeping your doc up-to-date with any kind of technical arfifact (whether it's java or C++ code, models, plug-in dependencies, a code
+						sample on the Internet...).<br/>
+						Following the Eclipse mantra "Be extensible, be integrated", you will be able to customize Intent to fit your own devlopment
+						processes (by defining custom validation rules for example).
+						<br/>
+						Intent is part of Eclipse release train since Juno
+						under the Mylyn Docs component.<br/>				
+					</aside>
+					<h2>Mylyn Intent: keep doc synchronized</h2>
+					<p>		
+						<ul><li>A documentation environment
+						<ul style="list-style-type: circle">
+							<li>synchronized with artifacts</li>
+							<li>customizable for your processes</li>
+						</ul></li>
+						<li>Part of Mylyn docs since Juno</li></ul>
+						<br/><br/>
+						<img src="img/intent_logo.png" class="reflectImg" style="position:relative;top:-20px;width:450px;background:none;border:0px solid black;"/>
+						
+			
+					</p>
+				</section>
+				<section class="bgImg" style="background:url(img/intent_linked_doc01.png);background-size:90%;height:82%;background-repeat:no-repeat;background-color:white; background-position:60px 0px;">
+					<aside class="notes">
+						To keep doc synchronized, what do we need? Well we need a simple and generic mechanism allowing to link documentation parts with
+						any kind of technical artifact (Java or C++ code, models, plug-in dependencies...).
+					</aside>
+				</section>
+				<section class="bgImg" style="background:url(img/intent_linked_doc02.png);background-size:90%;height:82%;background-repeat:no-repeat;background-color:white; background-position:60px 0px;">
+					<aside class="notes">
+						Why? Because thanks to these formal links...
+					</aside>
+				</section>
+				<section class="bgImg" style="background:url(img/intent_linked_doc03.png);background-size:90%;height:82%;background-repeat:no-repeat;background-color:white; background-position:60px 0px;">
+					<aside class="notes">
+						... It is straightfoward to determine which little documentation parts needs to be updated when we change any artifact.<br/>
+						Thanks to this mechanism, you doc is now able to quickly react to changes, turning it into a true Agile documentation.
+					</aside>
+				</section>
+				<section class="bgImg" style="background:url(img/intent_instead_of.png);background-size:90%;height:82%;background-repeat:no-repeat;background-color:white; background-position:60px 10px;">
+					<aside class="notes">
+						Very simply, this is how we did it in Intent: instead of having many documentation files on side, and many technical artifact
+						on the other side, with no links between them...
+					</aside>
+				</section>
+				<section>
+					<aside class="notes">
+						You get one single Intent document linking documentation & artifacts.
+						As you can see, an Intent Document is structured like any documentation (in contains chapter, sections, sub-sections...).
+						It contains both pure documentation zones & formal links zones.
+					</aside>
+					<h2>One Single Intent Document</h2>
+					<ul>
+						<li>Pure documentation zones</li>
+						<li> Formal links zones<br/><br/></li>
+					</ul>
+					<div class="intent_content" style="padding-left:15px;font-size:28px">
+						<b class="kw">Chapter</b> <b>Significant Scenarios</b> {
+								<p>
+									This chapter specifies the software behavior by listing relevant scenarios.<br/>
+								
+								<br/><b class="kw">Section</b> <b>Scenario 01: Filtering Offers</b> {</p>
+										<p>
+											When I select the <i style="color:blue">"Books"</i> in the Category Page,
+											I should only see the offers associated to this <i>_category_</i>.
+										</p>
+										<div class="intent_modelingunit" style="border: 1px solid grey;font-size:26px;margin-left:50px;margin-right:50px;padding-left:10px;">
+											<b class="kw">@M</b><br/>
+												<b class="kw" style="padding-left:50px">@ref</b><span style="color:blue"> "my.test.project/src/my/test/project/Scenario01Test.java"</span><br/>
+											<b class="kw">M@</b>
+										</div>
+								<p>}</p>
+							}
+					</div>
+				</section>
+				<section>
+					<aside class="notes">
+						Let's first take a look at the pure documentation zones. They are explanations in Natural langage, expressed using the textile 
+						syntax. Textile is wildly used within the eclipse community, if you do not know it we will give you a brief overview during demo.
+					</aside>
+					<h2>One Single Intent Document</h2>
+					<ul>
+						<li>Pure documentation zones</li>
+						<ul style="list-style-type: circle">
+							<li>Explanations in Natural language</li>
+							<li>Use the Textile syntax</li>
 						</ul>
-					</p>
+					</ul>
+					<div class="intent_content" style="padding-left:15px;font-size:28px">
+						<b class="kw">Chapter</b> <b>Significant Scenarios</b> {
+								<p>
+									This chapter specifies the software behavior by listing relevant scenarios.<br/>
+								
+								<br/><b class="kw">Section</b> <b>Scenario 01: Filtering Offers</b> {</p>
+										<p>
+											When I select the <i style="color:blue">"Books"</i> in the Category Page,
+											I should only see the offers associated to this <i>_category_</i>.
+										</p>
+										<div class="intent_modelingunit" id="blur" style="border: 1px solid grey;font-size:26px;margin-left:50px;margin-right:50px;padding-left:10px;">
+											<b class="kw">@M</b><br/>
+												<b class="kw" style="padding-left:50px">@ref</b><span style="color:blue"> "my.test.project/src/my/test/project/Scenario01Test.java"</span><br/>
+											<b class="kw">M@</b>
+										</div>
+								<p>}</p>
+							}
+					</div>
 				</section>
 				<section>
-					<h2>Mylyn Intent: basic idea</h2>
-					<p>
-						Instead of... One single Intent doc
-					</p>
+					<aside class="notes">
+						And, in addition to these pure documentation zones, the Intent documetn also contains formal links zones. This is these zones that 
+						allow us to reference technical arftifacts. Notice that the behavior of those zones is highly customizable: you can change the 
+						way they are displayed in the Intent editor, change the behavior of the hyperlinks, plug custom validation rules on the referenced
+						artifacts...
+					</aside>
+					<h2>One Single Intent Document</h2>
+					<ul>
+						<li>Formal links zones</li>
+						<ul style="list-style-type: circle">
+							<li>Reference to technical artifacts (Java, model...)</li>
+							<li>Extensible behavior (display, hyperlinks, validation...)</li>
+						</ul>
+					</ul>
+					<div class="intent_content" style="padding-left:15px;font-size:28px">
+						<div id="blur">
+						<b class="kw">Chapter</b> <b>Significant Scenarios</b> {
+								<p>
+									This chapter specifies the software behavior by listing relevant scenarios.<br/>
+								
+								<br/><b class="kw">Section</b> <b>Scenario 01: Filtering Offers</b> {</p>
+										<p>
+											When I select the <i style="color:blue">"Books"</i> in the Category Page,
+											I should only see the offers associated to this <i>_category_</i>.
+										</p>
+										</div>
+										<div class="intent_modelingunit" style="border: 1px solid grey;font-size:26px;margin-left:50px;margin-right:50px;padding-left:10px;">
+											<b class="kw">@M</b><br/>
+												<b class="kw" style="padding-left:50px">@ref</b><span style="color:blue"> "my.test.project/src/my/test/project/Scenario01Test.java"</span><br/>
+											<b class="kw">M@</b>
+										</div>
+								<div id="blur"><p>}</p>
+							}</div>
+					</div>
 				</section>
+				
 				<section>
-					<h2>Living Doc Demo: doc edition</h2>
+					<aside class="notes">
+						But enough with the chit-chat, let's see how this Living Documentation tool works on a concrete example.
+						ALA : environement description
+					</aside>
+					<h2>Living Doc in Action</h2>
 					<p>
 						<ul>
-							<li>Loading off your brain (only see doc parts you need)</li>
+							<li> Environment <ul>
+								<li>Eclipse Kepler SR1</li>
+								<li>Viewpoint (former version of Sirius)</li>
+								<li>Mylyn Intent 0.9</li>
+								<li>Living Doc bridge for Intent</li>
+								<li>A "magic filler" plugin (because I'm lazy)</li>							
+							</ul></li>
+						</ul>
+						<!-- Cinema clap -->
+						<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:500px"/>
+					</p>
+				</section>
+				
+				<section>
+					<aside class="notes">
+						MEB: scenario description
+					</aside>
+					<h2>Living Doc in Action</h2>
+					<p>
+						<ul>
+							<li> Scenario <ul>
+								<li>UML Designer uses Sirius to provide graphical modelers</li>
+								<li>We want to specify the features and link specs with:</li>
+									<ul>
+										<li>the corresponding Java tests</li>
+										<li>the corresponding VSM Element (model)</li>
+									</ul>
+							</ul></li>
+						</ul>
+						<!-- Cinema clap -->
+						<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:500px"/>
+					</p>
+				</section>
+				
+				<section>
+					<h2>Demo: doc edition</h2>
+					<p>
+						<ul>
+							<li>Loading off your brain (only see doc you need)</li>
 							<li>Customizable</li>
 							<li>Textile syntax (completion)</li>
 						</ul>
 					</p>
 				</section>
 				<section>
-					<h2>Living Doc Demo: defining Scenarios</h2>
+					<h2>Demo: defining Scenarios</h2>
 						<ul>
 							<li>Simple syntax for executable specs (Gerkhin)</li>
-							<li>Living doc bridge for Intent: provides completion, parsing & custom behavior</li>
-							<li>Cross-link capabilites</li>
+							<li>Living doc bridge for Intent provides additonal completion (and more)</li>					
 						</ul>
 				</section>
 				<section>
-					<h2>Living Doc Demo: toward executable scenarios</h2>
+					<h2>Demo: toward executable scenarios</h2>
 						<p>
 						From the specification, the Living Doc bridge:
 						<ul>							
@@ -208,32 +413,32 @@
 							<li>parse a Specification model out of documentation</li>
 						</ul>
 						</p>
-						<p>
-							Time to generate the tests out of the specifications
+						<p><br/>
+							Time to generate the tests!
 						</p>
 				</section>
 				<section>
-					<h2>Living Doc Demo: generating tests</h2>
+					<h2>Demo: generating tests</h2>
 						<ul>
-							Use documentation to generate test code structure
+							Use doc to generate test code structure
 						</ul>
 				</section>
 				<section>
-					<h2>Living Doc Demo: cross-linked documentation</h2>					
+					<h2>Demo: cross-linked documentation</h2>					
 						<ul>							
 							<li>Hyperlinks to navigate from doc to code</li>
 							<li>Quick-outline to retrieve doc parts related to a specific artifact</li>
 						</ul>
 				</section>
 				<section>
-					<h2>Living Doc Demo: advanced validation</h2>					
+					<h2>Demo: advanced validation</h2>					
 						<ul>							
 							<li>Custom validation rules</li>
 							<li>Custom quick-fixes</li>
 						</ul>
 				</section>
 				<section>
-					<h2>Living Doc Demo: it's alive!</h2>					
+					<h2>Demo: live and not let die</h2>					
 						<ul>							
 							<li>Drag and drop elements</li>
 							<li>Extensible synchronization: java/C++ classes, models, MANIFEST.MF, Jira issues...</li>
@@ -242,9 +447,9 @@
 						</ul>
 				</section>
 				<section>
-					<h2>Living Doc Demo: share the documentation</h2>					
+					<h2>Demo: share the documentation</h2>					
 						<ul>							
-							Doc export ?
+							Export documentation (HTML Bootstrap, PDF...)
 						</ul>
 				</section>			
 				
@@ -255,22 +460,27 @@
 						<li>Generate java code from test specifications</li>						
 						<li>Link documentation with other artifacts (java code, models...)</li>
 						<li>Know when documentation or tests should be updated</li>
-					</p>
+					</p>					
+					<img class="reflectImg" src="img/frankenstein.jpg" style="border:0px solid black;width:500px"/>
 				</section>
 
 				<section>
-					<h2>What's next ?</h2>
+					<h2>What's cooking?</h2>
 					<p>
 						Project development map = See what is tested or not, documented or not...
 						Project dashboard = Link documentation, specification, tests to:
 						the build, the bug tracker
 						???
 					</p>
+					<!-- casserole -->
+					<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:500px"/>
 				</section>
 
 				<section>
 					<h1>Thanks!</h1>
 					<h3>Alex Lagarde / Mélanie Bats</h3>
+					<!-- thumb up/ raising hands -->
+					<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:500px"/>
 				</section>
 
 			</div>
