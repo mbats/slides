@@ -1,0 +1,67 @@
+.reflectImg {
+border:0px solid black;
+-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(20%, transparent), to(rgba(255, 255, 255, 0.5)));
+}
+
+.bgImg {
+ background-color:white; 
+ -webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.75, transparent), to(rgba(255, 255, 255, 0.2)));
+}
+
+.intent_content {
+	-webkit-box-reflect: below 0px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(0.75, transparent), to(rgba(255, 255, 255, 0.2)));
+	background-color:#F8F8F8 ;
+	color:black;
+	text-align:left;
+}
+
+.focused {
+	font-style:bold;
+	color:white;
+	background-color:grey;
+	 -moz-border-radius: 5px;
+	border-radius: 5px; 
+	border:1px solid black;
+}
+
+.greyed {
+	color:grey;
+}
+
+.greyed b {
+	color:grey;
+}
+
+.greyed .kw {
+	color:grey;
+}
+
+.intent_content b {
+	color:black;
+}
+
+.intent_content i {
+	font-style:italic;
+}
+
+.intent_content p {
+	padding-left:50px;
+}
+
+.intent_content .kw {
+	color:#800000;
+}
+
+.intent_modelingunit {
+	background-color:#D8D8D8;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+}
+#blur {
+	opacity:0.4;
+	filter: blur(2px);
+	-webkit-filter: blur(2px);
+	-moz-filter: blur(2px);
+	-o-filter: blur(2px);
+	-ms-filter: blur(2px);
+}
