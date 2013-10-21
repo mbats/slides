@@ -39,9 +39,7 @@
 			<div class="slides">
 				<section>
 					<h1>Living Documentation</h1>					
-					<p>
-						<small>Alex Lagarde, Mélanie Bats / Obeo</small>
-					</p>
+					<h4>Alex Lagarde, Mélanie Bats / Obeo</h4>
 					<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:650px"/>
 				</section>
 
@@ -166,10 +164,11 @@
 				<section>
 					<h2>Why yet another solution ?</h2>
 					<ul>
-						<li>Functional users should be able to write scenarios</li>						
-						<li>Generate java code from test specifications</li>						
-						<li>Link documentation with other artifacts (java code, models...)</li>
+						<li>Not accessible to Functional users</li>						
+						<li>Generate code from test specifications</li>						
+						<li>Link specs with other artifacts</li>
 						<li>Know when documentation or tests should be updated</li>
+						<li>Need to automate guidelines validation</li>
 						<li>(est-ce vraiment un argument?)We are tool providers</li>
 					
 					</ul>
@@ -357,7 +356,6 @@
 						<ul>
 							<li> Environment <ul>
 								<li>Eclipse Kepler SR1</li>
-								<li>Viewpoint (former version of Sirius)</li>
 								<li>Mylyn Intent 0.9</li>
 								<li>Living Doc bridge for Intent</li>
 								<li>A "magic filler" plugin (because I'm lazy)</li>							
@@ -390,7 +388,8 @@
 				</section>
 				
 				<section>
-					<h2>Demo: doc edition</h2>
+					<h2 style="background-color:white;color:black">Demo: doc edition</h2>
+					<h3>(Mylyn Intent)</h3>
 					<p>
 						<ul>
 							<li>Loading off your brain (only see doc you need)</li>
@@ -398,64 +397,87 @@
 							<li>Textile syntax (completion)</li>
 						</ul>
 					</p>
+					<p><br/>
+						&rarr; Let's specify a new feature for UML Designer
+					</p>
 				</section>
 				<section>
-					<h2>Demo: defining Scenarios</h2>
-						<ul>
-							<li>Simple syntax for executable specs (Gerkhin)</li>
-							<li>Living doc bridge for Intent provides additonal completion (and more)</li>					
-						</ul>
+					<h2 style="background-color:white;color:black">Demo: defining Scenarios</h2>
+					<h3>(Living doc bridge)</h3>
+					<ul>
+						<li>Simple syntax for executable specs (Gerkhin)</li>
+						<li>additonal completion</li>					
+					</ul>
 				</section>
 				<section>
-					<h2>Demo: toward executable scenarios</h2>
-						<p>
-						From the specification, the Living Doc bridge:
+					<h2 style="background-color:white;color:black">Demo: toward executable scenarios</h2>
+					<p>
+						<h3>(Living doc bridge)</h3>
 						<ul>							
-							<li>creates links from doc to tests (warning if not exists)</li>
+							<li>creates links from doc to tests (warning if not exist)</li>
 							<li>parse a Specification model out of documentation</li>
 						</ul>
-						</p>
-						<p><br/>
-							Time to generate the tests!
-						</p>
+					</p>
+					<p><br/>
+						&rarr; Let's generate the tests from Spec model
+					</p>
 				</section>
 				<section>
-					<h2>Demo: generating tests</h2>
-						<ul>
-							Use doc to generate test code structure
-						</ul>
+					<h2 style="background-color:white;color:black">Demo: generating tests</h2>
+					<h3>(Living doc generator)</h3>
+					<ul>
+						Use doc to generate test code structure
+					</ul>
+					<p><br/>
+						&rarr; Let's try to navigate from doc to code
+					</p>
 				</section>
 				<section>
-					<h2>Demo: cross-linked documentation</h2>					
+					<h2 style="background-color:white;color:black">Demo: cross-linked documentation</h2>
+					<h3>(Mylyn Intent)</h3>					
+					<ul>							
+						<li>Hyperlinks to navigate from doc to code</li>
+						<li>Quick-outline to retrieve doc parts related to an artifact</li>
+					</ul>
+					<p><br/>
+						&rarr; Let's take a look at the warning
+					</p>
+				</section>
+				<section>
+					<h2 style="background-color:white;color:black">Demo: advanced validation</h2>	
+					<h3>(Living doc bridge)</h3>									
+					<ul>							
+						<li>Custom validation rules</li>
+						<li>Custom quick-fixes</li>
+					</ul>
+					<p><br/>
+						&rarr; Let's link new elements
+					</p>
+				</section>
+				<section>
+					<h2 style="background-color:white;color:black">Demo: live and not let die</h2>					
 						<ul>							
-							<li>Hyperlinks to navigate from doc to code</li>
-							<li>Quick-outline to retrieve doc parts related to a specific artifact</li>
-						</ul>
-				</section>
-				<section>
-					<h2>Demo: advanced validation</h2>					
-						<ul>							
-							<li>Custom validation rules</li>
-							<li>Custom quick-fixes</li>
-						</ul>
-				</section>
-				<section>
-					<h2>Demo: live and not let die</h2>					
-						<ul>							
-							<li>Drag and drop elements</li>
-							<li>Extensible synchronization: java/C++ classes, models, MANIFEST.MF, Jira issues...</li>
-							<li>If you modify a test, update the corresponding scenario (or do not modify it)</li>
-							<li>If you modify the specification, update the corresponding test (or do not modify it)</li>
+							<li>Drag and drop artifacts inside doc</li>
+							<li>Deciding when to update the doc is up to you</li>
+							<li>Extensible synchronization
+							<ul>
+							<li>Modify the VSM &rarr; update specs or rollback</li>
+							<li>Modify a Java test &rarr; update specs or rollback</li>
+							<li>Modify the specifications &rarr; update tests or rollback</li>
+							</ul></li>
 						</ul>
 				</section>
 				
 				<section>
 					<h2>Alive, it's alive!</h2>
 					<p>
-						<li>Functional users can write scenarios</li>						
-						<li>Generate java code from test specifications</li>						
-						<li>Link documentation with other artifacts (java code, models...)</li>
-						<li>Know when documentation or tests should be updated</li>
+						<ul>
+							<li>Functional users can write scenarios</li>						
+							<li>Generate code from test specifications</li>						
+							<li>Link doc and artifacts</li>
+							<li>Know when documentation or tests should be updated</li>
+							<li>Automate custom guidelines checking</li>
+						</ul>
 					</p>					
 					<img class="reflectImg" src="img/frankenstein.jpg" style="border:0px solid black;width:500px"/>
 				</section>
@@ -463,15 +485,30 @@
 				<section>
 					<h2>What's cooking?</h2>
 					<p>
-						Project development map = See what is tested or not, documented or not...
-						Project dashboard = Link documentation, specification, tests to:
-						the build, the bug tracker
-						???
+						<ul>
+							<li>Stabilisation & performances</li>
+							<li>Project managment diagram: visualize
+								<ul>
+									<li>What's documented?</li>
+									<li>What's tested?</li>
+									<li>What's outdated?</li>
+								</ul>
+							</li>
+							<li>New synchronization bridges FTW (builds, bug tracker...)</li>
+						</ul>
 					</p>
 					<!-- casserole -->
 					<img class="reflectImg" src="img/livingdoc-04.jpg" style="border:0px solid black;width:500px"/>
 				</section>
 
+				<section>
+					<h2>The 3 things to remember about Living documentation</h2>
+					<ol>
+						<li>Opens test specification to functional users</li>
+						<li>Keeps your doc up-to-date with concrete world</li>
+						<li>Demo was just an example</li>
+					</ol>
+				</section>
 				<section>
 					<h1>Disclaimer</h1>
 					<p>Only one (especially crappy) book was harmed during the preparation of this talk</p>
@@ -480,12 +517,28 @@
 				</section>
 				
 				<section>
+				<h4 style="background-color:white;margin:50px;color:black;padding:0px;">Don't forget to give feedback <img src="img/feedback.png" style="padding-left:50px;padding-right:50px;margin-top:-20px;position:relative;top:20px;width:150px;border:0px solid black;"/></h4>
+					
 					<h1>Thanks!</h1>
-					<h3>Alex Lagarde / Mélanie Bats</h3>
 					<!-- thumb up/ raising hands -->
 					<img class="reflectImg" src="img/livingdoc-06.jpg" style="border:0px solid black;width:500px"/>
+					
 				</section>
 
+				<section>
+					<h2>Don't miss Sirius talks</h2>
+					<ul>
+						<li>Wednesday
+							<ul>
+								<li>14:30 - Changing the Game of Systems Architecture</li>
+								<li>16:15 - Sirius By Example</li>
+								<li>17:00 - EcoreTools 2.0: The Making Of</li>
+								<li>19:00 - BOF "Let's get Sirius"</li> 
+							</ul>
+						</li>
+						<li>At any time: ask us or visit Obeo booth</li>
+					</ul>
+				</section>
 			</div>
 
 		</div>
