@@ -6,8 +6,8 @@
 
 		<title>Living Documentation</title>
 
-		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
-		<meta name="author" content="Hakim El Hattab">
+		<meta name="description" content="Living documentation">
+		<meta name="author" content="Alex Lagarde / Mélanie Bats">
 
 		<meta name="apple-mobile-web-app-capable" content="yes" />
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -38,68 +38,89 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
+					<aside class="notes">
+					MEB : My purpose today is to share with you our motivation to develop and use a living documentation tool. At the beginning of this project, our need was to improve the documentation existing on a software project we are developping at Obeo, which is named UML Designer. This project is an Eclipse product based on Sirius providing graphical designer to create UML diagrams. At that time, this project was poorly documented. There was no specification, it only exists some unit and UI tests and some user documentation. The idea was to write a documentation that will be useful during the all project lifecycle.
+					</aside>
 					<h1>Living Documentation</h1>					
+					<img src="img/livingdoc-01.jpg" style="border:0px solid black;width:650px"/>
 					<h4>Alex Lagarde, Mélanie Bats / Obeo</h4>
-					<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:650px"/>
 				</section>
 
 				<section>
 					<aside class="notes">
-					MEB : What good is a functional test if when you change it you cannot retrieve which scenario/requirement should be updated?
+					MEB : Most of the time in software projects, documentation is a sloppy task. The problem is that many developpers don't like to write documentation. Often they does not have time to write documentation and when they take or have the time to write it, they feel like if they are loosing their time, as this documentation will never be updated later. That's completly true, spending time to write a documentation that will never be updated is useless! As developper we paid attention to write and maintain tests up to date but it is not the case for the documentation. Updating the documentation is considered as a boring task. You have to open another software, to edit the documentation and then you have to find manually which parts of the documentation should be updated. How could we improve this in order that the documentation become more easy to maintain up to date?
 					</aside>
 					<h2>The reality</h2>
 					<p>
 						Write once...and never look at again
 					</p>
-					<img class="reflectImg" src="img/wasted_paper.jpg" style="border:0px solid black;width:600px"/>
+					<img src="img/wasted_paper.jpg" style="border:0px solid black;width:600px"/>
 				</section>
 
 				<section>
 					<aside class="notes">
-					MEB :  Make doc & tests evolve hand in hand. NOT SAME LIFECYCLE, but tools to cross-link & synchronize.
+					MEB : When I start working on this, my idea was to find a way to make the documentation & the tests evolving hand in hand. The main problem was that all the different artifacts of a software project (code, tests, requirements) have NOT the SAME LIFECYCLE. The different persons working on a project could update the different artifacts independently. But this generates outdated documents regarding the code and the tests. What good is a requirement if when you change it you cannot retrieve which functional test should be updated? What I need is a tool to cross-link & synchronize all the project's artifacts to get a consistent documentation at any moment.
 					</aside>
 					<h2>The theory</h2>
 					<p>
 						Continue to evolve to get a consistent documentation
 					</p>
 					<!-- arrow circle -->
-					<img class="reflectImg" src="img/livingdoc-07.jpg" style="border:0px solid black;width:600px"/>
+					<img src="img/livingdoc-07.jpg" style="border:0px solid black;width:600px"/>
 				</section>
 
 				<section>
+					<aside class="notes">
+					MEB : I want a referential containing all the information of my project in a single place in order that anybody involved in the software could find easily what he looks for whether he searchs for requirements, tests, implementation details or architecture explanation. 
+					</aside>
 					<h2>Our expectation</h2>
 					<p>
 						Single source of truth to share the understanding
 					</p>
+					<img src="img/truth.jpg" style="border:0px solid black;width:600px"/>
 				</section>
 
 				<section>
+					<aside class="notes">
+					MEB : As developpers,  we are used to write Java tests. Theses tests are written to test the code we developped.
+					</aside>
 					<h2>We are testing</h2>
 					<p>
 						Developpers are used to write unit tests but...
 					</p>
+					<img src="img/testing.jpg" style="border:0px solid black"/>
 				</section>
 
 				<section>
+					<aside class="notes">
+					MEB : In fact what we want is not to test the code but we want to validate the behaviour of the software. This means that everyone should be able to understand and participate to the tests : Developpers or end users.
+					</aside>
 					<h2>Everyone should participate</h2>
 					<p>
 						Testing is not only matter of developpers
 					</p>
+					<img src="img/everybody.jpg" style="border:0px solid black"/>
 				</section>
 
 				<section>
+					<aside class="notes">
+					MEB : In UML Designer project I already had many unit tests written in Java. Today these tests are understandable only by Java developpers. Our purpose is to get a kind of map of the different features of the software. How these features are linked to the test? What is implemented or not and is it well tested or not ? This means that the tests must be understandable by anybody, developpers, testers, and any other stakeholders... So we choose to change the focus of the tests, to turn our computer focused tests into human focused documentation.
+					</aside>
 					<h2>Change focus</h2>
 					<p>
-						Turn computer-focuses tests
+						Turn <b>computer</b>-focused <b>tests</b>
 					</p>
 					<p>
-						into human-focused documentation
+						into <b>human</b>-focused <b>documentation</b>
 					</p>
-					<img class="reflectImg" src="img/robot_to_human.jpeg" style="border:0px solid black;width:600px"/>
+					<img src="img/robot_to_human.jpeg" style="border:0px solid black;width:600px"/>
 				</section>
 
 				
 				<section>
+					<aside class="notes">
+					MEB : So I searched a solution to write my project specification. I had a look at what already exists in this domain. As I already heared many things about acceptance testing and executable specification. I take a look on behaviour driven development. BDD is a software development process based on test driven development. It explains how software development should be managed by both business interests and technical insight. As we are not doing TDD on this project, and as our main purpose is to specify the behavoiur of ou software we decided to introduce BDD as process development for UML Designer.
+					</aside>
 					<h2>Inspiration</h2>
 					<p>
 						Acceptance testing
@@ -110,58 +131,92 @@
 					<p>
 						Executable specification
 					</p>
-					<p>
-						Cucumber, Jnario...
-					</p>
 				</section>
 				<section>
+					<aside class="notes">
+					MEB : When I start writing the specification, I need to identify, what were the main features of my software. The first step for me was to clarify who are my end-users. I used personas for this. A persona is a fictional person that represents a group of users. Using personas help me to define which features are the main important ones and consequently where we have to focus our effort. Thanks to this we know what our software must do but how these desired behavior should be specified?
+					</aside>
 					<h2>Specification by example</h2>
 					<p>
 						Persona
-					</p>
-					<p>
-						Executable specification
-					</p>
+					</p>					
+					
 					<!-- personn -->
-					<img class="reflectImg" src="img/livingdoc-02.jpg" style="border:0px solid black;width:650px"/>
+					<img src="img/livingdoc-02.jpg" style="border:0px solid black;width:650px"/>
 				</section>
 				<section>
+					<aside class="notes">
+					MEB : Next step was to find a way to describe these features in order then to re-use the information to generate the tests. According to BDD, we decided to keep 3 different concepts : feature, story and scenario. The features are logical groups of stories. A story specifies who is the stakeholder, which effects it should cause and what business value the stakeholder will get from this effect. A scenario is an acceptance tests used to determine if a requirement/a story is met. Thanks to this process, all the features of our software must be described and linked to acceptance tests. We use the Gherkin syntax to formalize, the acceptance criterias. It starts by specifying the initial context, then defines which triggers start the scenario and finally describes the expected effects. 
+					</aside>
 					<h2>BDD</h2>
 					<p>
-						Acceptance testing
+						Feature
 					</p>
 					<p>
-						Gerkhin
+						Story (As, I want, So that) 
+					</p>					
+					<p>
+						Scenario (Gherkin)
 					</p>
+					<div class="intent_content" style="padding-left:15px;font-size:28px">
+						<b class="kw">Feature:</b> <b>Password management</b>
+						<p><b class="kw">Scenario:</b> <b>Forgot password</b></p>
+						<p><b class="kw">Given</b> a user with email "cukes@cukes.info" exists</p>
+    						<p><b class="kw">When</b> I ask for a password reset</p>
+   						<p><b class="kw">Then</b> an email with a password reset link should be sent</p>
+					</div>
 				</section>
 
 				<section>
+					<aside class="notes">
+					MEB : The last but not least point for us, is to keep the documentation, the code and the tests up-to-date. As relying only on person is not sufficient to keep all these artifacts alive, we were looking for tools to help us on this task. We searched a BDD framework that allows to synchronize all the artifacts of a project.
+					</aside>
 					<h2>Living documentation</h2>
 					<p>
 						Keep doc, code & tests up-to-date
 					</p>
-					<img class="reflectImg" src="img/livingdoc-01.jpg" style="border:0px solid black;width:500px"/>
+					<img src="img/livingdoc-01.jpg" style="border:0px solid black;width:500px"/>
 
 				</section>
 				
 				<section>
+					<aside class="notes">
+					MEB : First I tried Cucumber as it is the most used BDD framework, it is mostly used by web application developpers.
+					</aside>
 					<h2>Had a look on...</h2>
 					<p>
 						Cucumber = the most used BDD framework
 					</p>
+					<img src="img/cucumber.png" style="border:0px solid black;background-color:white;width:500px"/>
+				</section>
+				<section>
+					<aside class="notes">
+					MEB : But, as the code of the application is written in Java, I tried JBehave which is an equivalent to cucumber but adapted to Java code. As UML Designer is an Eclipse product, it was not so easy to integrate JBehave in our development and current test process. And the scenario definition was still to close to the Java code.
+					</aside>
+					<h2>Had a look on...</h2>
 					<p>
 						JBehave = adapted for java
 					</p>
+					<img src="img/jbehave1.png" style="border:0px solid black;background-color:white;width:400px"/>
+					<img src="img/jbehave2.png" style="border:0px solid black;background-color:white;width:400px"/>
+					<img src="img/jbehave3.png" style="border:0px solid black;background-color:white;width:400px"/>
 				</section>
 
 				<section>
+					<aside class="notes">
+					MEB : Another solution could be Jnario. Jnario is also a cucumber like software to write concise tests to document the behaviour of Java programs. It is well integrated to JUnit and Eclipse. Jnario automatically generates the Java tests code from the specification. The problem is that, to test our project we have different kind of tests : unit, plugin and UI tests. These tests run with different kind of launchers, and as for UI tests we are using SWTBot, it is possible but not simple to integrate it to Jnario. Even more important, we need a way to synchronize not only specification and tests but also other kind of project artifacts (User documentation, Sirius specification...).
+					</aside>
 					<h2>Gave a try to...</h2>
 					<p>
 						Jnario = well integrated to Eclipse
 					</p>
+					<img src="img/jnario.png" style="border:0px solid black;background-color:white;width:500px"/>
 				</section>
 
 				<section>
+					<aside class="notes">
+					MEB : We decided to develop our own tool but inspired by all the previous ones I described. We keep the Gherkin syntax to make test writing accessible to functional users. Then our ideas was to generate the code from the test specifications. We need also to be able to link the specifications with any other kind of artifacts not only code. And the most important point, we need to known when one of these artifacts has to be updated. Finally, we want to automate some guidelines validation to be sure that our documentation contains all the information we expect and to help the user to write good documentatin.  
+					</aside>
 					<h2>Why yet another solution ?</h2>
 					<ul>
 						<li>Not accessible to Functional users</li>						
@@ -169,18 +224,16 @@
 						<li>Link specs with other artifacts</li>
 						<li>Know when documentation or tests should be updated</li>
 						<li>Need to automate guidelines validation</li>
-						<li>(est-ce vraiment un argument?)We are tool providers</li>
-					
 					</ul>
 				</section>
 
 				<section>
 					<aside class="notes">
-						We decided to create the Intent project because we realized that most of software documentation is outdated (i.e. contains 
+						ALA: We decided to create the Intent project because we realized that most of software documentation is outdated (i.e. contains 
 						information that does not reflect the latest state of the software). And outdated documentation is worse than no documentation at all:
 						although you spent a lot of time and effort trying to document your software, now your doc can mislead the reader. 
 						Sooner or later, no one will read your documentation anymore and hence it will become useless.<br/>
-						Then we asked oursleves: why is documentation so often outdated? Well this is the inconvenient truth about documentation: 
+						Then we asked ourselves: why is documentation so often outdated? Well this is the inconvenient truth about documentation: 
 						updating it is a burden. When you make a modification on the code, how many of you take the time to browse through the hundred
 						of pages of documentation just to find out the little documentation parts to need to be updated, and check for the whole doc 
 						consistency afteward? No one, and that's how documentation gets unsynchronized.<br/>
@@ -218,7 +271,7 @@
 						</ul></li>
 						<li>Part of Mylyn docs since Juno</li></ul>
 						<br/><br/>
-						<img src="img/intent_logo.png" class="reflectImg" style="position:relative;top:-20px;width:450px;background:none;border:0px solid black;"/>
+						<img src="img/intent_logo.png" style="position:relative;top:-20px;width:450px;background:none;border:0px solid black;"/>
 						
 			
 					</p>
@@ -236,8 +289,8 @@
 				</section>
 				<section data-transition="fade" data-transition-speed="slow" class="bgImg" style="background:url(img/intent_linked_doc03.png);background-size:90%;height:82%;background-repeat:no-repeat;background-color:white; background-position:60px 0px;">
 					<aside class="notes">
-						... It is straightfoward to determine which little documentation parts needs to be updated when we change any artifact.<br/>
-						Thanks to this mechanism, you doc is now able to quickly react to changes, turning it into a true Agile documentation.
+						... It is straightforward to determine which little documentation parts needs to be updated when we change any artifact.<br/>
+						Thanks to this mechanism, your doc is now able to quickly react to changes, turning it into a true Agile documentation.
 					</aside>
 				</section>
 				<section class="bgImg" style="background:url(img/intent_instead_of.png);background-size:90%;height:82%;background-repeat:no-repeat;background-color:white; background-position:60px 10px;">
@@ -351,80 +404,85 @@
 						But enough with the chit-chat, let's see how this Living Documentation tool works on a concrete example.
 						ALA : environement description
 					</aside>
-					<h2>Living Doc in Action</h2>
+					<h2>Living Doc in Action : Environment</h2>
 					<p>
 						<ul>
-							<li> Environment <ul>
-								<li>Eclipse Kepler SR1</li>
-								<li>Mylyn Intent 0.9</li>
-								<li>Living Doc bridge for Intent</li>
-								<li>A "magic filler" plugin (because I'm lazy)</li>							
-							</ul></li>
+							<li>Eclipse Kepler SR1</li>
+							<li>Mylyn Intent 0.9</li>
+							<li>Living Doc bridge for Intent</li>
+							<li>A "magic filler" plugin (because I'm lazy)</li>		
 						</ul>
 						<!-- Cinema clap -->
-						<img class="reflectImg" src="img/livingdoc-03.jpg" style="border:0px solid black;width:500px"/>
+						<img src="img/livingdoc-03.jpg" style="border:0px solid black;width:500px"/>
 					</p>
 				</section>
 				
 				<section>
 					<aside class="notes">
-						MEB: scenario description
+						MEB: In the demo, we will show you part of the UML Designer specification. How to specify a new feature in the Intent document and as UML Designer is based on Sirius, we will demonstrate also how to link the specification with the Sirius specification model. Then, we will show how we generate the test structure from the specification and finally the synchronization mechanism between all these artifacts.
 					</aside>
-					<h2>Living Doc in Action</h2>
+					<h2>Living Doc in Action : Scenario</h2>
 					<p>
-						<ul>
-							<li> Scenario <ul>
-								<li>UML Designer uses Sirius to provide graphical modelers</li>
-								<li>We want to specify the features and link specs with:</li>
-									<ul>
-										<li>the corresponding Java tests</li>
-										<li>the corresponding VSM Element (model)</li>
-									</ul>
-							</ul></li>
+						<ul>	
+							<li>Specify the features, stories and scenarios</li>		
+							<li>Link the specifications with:</li>
+							<ul>
+								<li>the Java tests</li>
+								<li>the Sirius specification model</li>
+							</ul>
+							<li>Generate test code</li>
+							<li>Iterate by updating code, specification or tests</li>
 						</ul>
 						<!-- Cinema clap -->
-						<img class="reflectImg" src="img/livingdoc-03.jpg" style="border:0px solid black;width:500px"/>
+						<img src="img/livingdoc-03.jpg" style="border:0px solid black;width:500px"/>
 					</p>
 				</section>
 				
 				<section>
-					<h2 style="background-color:white;color:black">Demo: doc edition</h2>
-					<h3>(Mylyn Intent)</h3>
-					<p>
+					<aside class="notes">
+						ALA:  ???
+					</aside>
+					<h2 style="background-color:white;color:black">Doc edition</h2>
+					<h3>Mylyn Intent</h3>
 						<ul>
 							<li>Loading off your brain (only see doc you need)</li>
 							<li>Customizable</li>
 							<li>Textile syntax (completion)</li>
 						</ul>
-					</p>
 					<p><br/>
 						&rarr; Let's specify a new feature for UML Designer
 					</p>
 				</section>
 				<section>
-					<h2 style="background-color:white;color:black">Demo: defining Scenarios</h2>
-					<h3>(Living doc bridge)</h3>
+					<aside class="notes">
+						MEB:  ???
+					</aside>
+					<h2 style="background-color:white;color:black">Defining Scenarios</h2>
+					<h3>Living doc bridge</h3>					
 					<ul>
-						<li>Simple syntax for executable specs (Gerkhin)</li>
-						<li>additonal completion</li>					
+						<li>Simple syntax for executable specs (Gherkin)</li>
+						<li>Additional completion</li>					
 					</ul>
 				</section>
 				<section>
-					<h2 style="background-color:white;color:black">Demo: toward executable scenarios</h2>
-					<p>
-						<h3>(Living doc bridge)</h3>
+					<h2 style="background-color:white;color:black">Toward executable scenarios</h2>
+	
+						<h3>Living doc bridge</h3>
 						<ul>							
 							<li>creates links from doc to tests (warning if not exist)</li>
 							<li>parse a Specification model out of documentation</li>
 						</ul>
-					</p>
+					
 					<p><br/>
 						&rarr; Let's generate the tests from Spec model
 					</p>
 				</section>
 				<section>
-					<h2 style="background-color:white;color:black">Demo: generating tests</h2>
-					<h3>(Living doc generator)</h3>
+					<aside class="notes">
+						ALA:  ???
+					</aside>
+					<h2 style="background-color:white;color:black">Generating tests</h2>
+					<h3>Living doc generator</h3>
 					<ul>
 						Use doc to generate test code structure
 					</ul>
@@ -433,8 +491,11 @@
 					</p>
 				</section>
 				<section>
-					<h2 style="background-color:white;color:black">Demo: cross-linked documentation</h2>
-					<h3>(Mylyn Intent)</h3>					
+					<aside class="notes">
+						ALA:  ???
+					</aside>
+					<h2 style="background-color:white;color:black">Cross-linked documentation</h2>
+					<h3>Mylyn Intent</h3>					
 					<ul>							
 						<li>Hyperlinks to navigate from doc to code</li>
 						<li>Quick-outline to retrieve doc parts related to an artifact</li>
@@ -444,8 +505,11 @@
 					</p>
 				</section>
 				<section>
-					<h2 style="background-color:white;color:black">Demo: advanced validation</h2>	
-					<h3>(Living doc bridge)</h3>									
+					<aside class="notes">
+						ALA:  ???
+					</aside>
+					<h2 style="background-color:white;color:black">Advanced validation</h2>	
+					<h3>Living doc bridge</h3>									
 					<ul>							
 						<li>Custom validation rules</li>
 						<li>Custom quick-fixes</li>
@@ -455,31 +519,20 @@
 					</p>
 				</section>
 				<section>
-					<h2 style="background-color:white;color:black">Demo: live and not let die</h2>					
+					<aside class="notes">
+						MEB:  In conclusion, you have no more reason, to let your documentation die! Thanks to Mylyn Intent it's easy to link the different artifacts to your documentation. Thanke to the synchronization mechanism, you can decide to update the documentation when you want, you can find when an artifacts was modified which part of the documentation should be updated.
+					</aside>
+					<h2 style="background-color:white;color:black">Live and not let die</h2>					
 						<ul>							
 							<li>Drag and drop artifacts inside doc</li>
 							<li>Deciding when to update the doc is up to you</li>
 							<li>Extensible synchronization
 							<ul>
-							<li>Modify the VSM &rarr; update specs or rollback</li>
+							<li>Modify the Sirius specification model &rarr; update specs or rollback</li>
 							<li>Modify a Java test &rarr; update specs or rollback</li>
 							<li>Modify the specifications &rarr; update tests or rollback</li>
 							</ul></li>
 						</ul>
-				</section>
-				
-				<section>
-					<h2>Alive, it's alive!</h2>
-					<p>
-						<ul>
-							<li>Functional users can write scenarios</li>						
-							<li>Generate code from test specifications</li>						
-							<li>Link doc and artifacts</li>
-							<li>Know when documentation or tests should be updated</li>
-							<li>Automate custom guidelines checking</li>
-						</ul>
-					</p>					
-					<img class="reflectImg" src="img/frankenstein.jpg" style="border:0px solid black;width:500px"/>
 				</section>
 
 				<section>
@@ -498,31 +551,23 @@
 						</ul>
 					</p>
 					<!-- casserole -->
-					<img class="reflectImg" src="img/livingdoc-04.jpg" style="border:0px solid black;width:500px"/>
+					<img src="img/livingdoc-04.jpg" style="border:0px solid black;width:500px"/>
 				</section>
 
 				<section>
-					<h2>The 3 things to remember about Living documentation</h2>
+					<h2>Remember : Living doc, it's alive!</h2>
 					<ol>
-						<li>Opens test specification to functional users</li>
-						<li>Keeps your doc up-to-date with concrete world</li>
-						<li>Demo was just an example</li>
+						<li>Everybody can participate to tests</li>
+						<li>Doc up-to-date with concrete world</li>
+						<li>Customizable to your needs</li>
 					</ol>
+					<img src="img/frankenstein.jpg" style="border:0px solid black;width:500px"/>
 				</section>
 				<section>
-					<h1>Disclaimer</h1>
+					<h2>Disclaimer</h2>
 					<p>Only one (especially crappy) book was harmed during the preparation of this talk</p>
 					<!-- thumb up/ raising hands -->
-					<img class="reflectImg" src="img/livingdoc-05.jpg" style="border:0px solid black;width:500px"/>
-				</section>
-				
-				<section>
-				<h4 style="background-color:white;margin:50px;color:black;padding:0px;">Don't forget to give feedback <img src="img/feedback.png" style="padding-left:50px;padding-right:50px;margin-top:-20px;position:relative;top:20px;width:150px;border:0px solid black;"/></h4>
-					
-					<h1>Thanks!</h1>
-					<!-- thumb up/ raising hands -->
-					<img class="reflectImg" src="img/livingdoc-06.jpg" style="border:0px solid black;width:500px"/>
-					
+					<img src="img/livingdoc-05.jpg" style="border:0px solid black;width:500px"/>
 				</section>
 
 				<section>
@@ -538,6 +583,16 @@
 						</li>
 						<li>At any time: ask us or visit Obeo booth</li>
 					</ul>
+					<img src="img/logo_Sirius.png" style="border:0px solid black;width:300px"/>
+				</section>
+
+				
+				<section>
+					<h1>Thanks!</h1>
+					<!-- thumb up/ raising hands -->
+					<img src="img/livingdoc-06.jpg" style="border:0px solid black;width:500px"/>
+				<h4 style="background-color:white;margin:50px;color:black;padding:0px;">Don't forget to give feedback <img src="img/feedback.png" style="padding-left:50px;padding-right:50px;margin-top:-20px;position:relative;top:20px;width:150px;border:0px solid black;"/></h4>
+						
 				</section>
 			</div>
 
