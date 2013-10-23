@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.min.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -36,7 +36,7 @@
 
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
-				<section>
+				<section data-background="images/arduino-eye.jpg">
 					<h2>Turning Eclipse into an Arduino programming platform for kids</h2>
 					<p>
 						<small>Mélanie Bats / Obeo</small>
@@ -52,6 +52,7 @@
 					<p>
 						Explore, question and learn
 					</p>
+					<img src="images/curiosity2.jpg"/>
 					<aside class="notes">
 						Children are such curious creatures. They explore, question, and wonder, and by doing so, learn. From the moment of birth, likely even before, humans are meant to learn new things. When we are curious about something new, we want to explore it.
 					</aside>
@@ -63,6 +64,7 @@
 					<p>
 						Explore to understand cause and effects.
 					</p>
+					<img src="images/discover2.jpg"/>
 					<aside class="notes">
 					A good way to discover is to explore by yourself, trying, encountering success and failures. This way, kids learn causes and effects.
 					</aside>
@@ -73,6 +75,7 @@
 					<p>
 						To understand the world, you need to understand how computers work
 					</p>
+					<img src="images/computer.jpg"/>
 					<aside class="notes">
 					Today, the world is made of computers. At home, in TVs, DVD players, coffee machines, electronic toys, pet robots... outside in cars, planes, phones... Nowadays kids are used to play with tablets and computers. They are curious to understand how a video game is created...
 					</aside>
@@ -83,6 +86,7 @@
 					<p>
 						Play with sensors and actuators
 					</p>
+					<img src="images/electronics.jpg"/>
 					<aside class="notes">
 						The idea to learn electronics is to understand that there are sensors to listen to the environment and actuators with which you can interact. These modules are connected to a platform which contains software.
 					</aside>
@@ -92,53 +96,64 @@
 				<section>
 					<h2>Open hardware</h2>
 					<p>
-						Arduino
+						<a href="http://www.arduino.cc/">Arduino</a>
 					</p>
+					<img src="images/open-hardware.jpg"/>
 					<aside class="notes">
-						????
+						What is open hardware ? Open source hardware is a licensing agreement for electromechanical projects. That is to say, electronics and robotics and other mechanical projects are open hardware if they are documented and published under an open hardware license. The most famous open hardware platform is Arduino. With Arduino you get a piece of hardware, but also documentation and a development environment that fits all together with hardware.
 					</aside>
 				</section>
 
 				<section>
 					<h2>Arduino kits</h2>
 					<p>
-						Cheap, easy to find thanks to many different providers : AdaFruit, DFRobot, SnootLab, ...
+						Cheap, easy to find thanks to many different providers : <a href="http://www.adafruit.com/">AdaFruit</a>, <a href="http://www.dfrobot.com">DFRobot</a>, <a href="http://www.seeedstudio.com">SeeedStudio</a>, <a href="http://snootlab.com/">SnootLab</a>, ...
+					</p>
+					<p>
 						So many kinds of modules available!
 					</p>
+					<img src="images/arduino-starter-kit.jpg"/>
 					<aside class="notes">
 						What's great with arduino is that it is cheap and really easy to find. There are many efficient providers available on internet. Order and two days later you will receive at home your new toy.
 					</aside>
 				</section>
 				<section>
-					<h2>Prototype based on DFRobot starter kit</h2>
+					<h2>Prototype based on DFRobot Ardublock kit</h2>
 					<p>
-						Sensors to detect: ambient light, infrared , sound, push button, rotation
+						Sensors : ambient light, infrared , sound, push button, rotation
+					</p>
+					<p>
 						Actuators : LEDs, micro servo motors, fan
 					</p>
+					<img src="images/ardublock-kit.jpg"/>
 					<aside class="notes">
-						For the prototype, I am going to use the DFRobot starter kit which contains: ambient light sensor, infrared sensor, sound sensor, push buttons, rotation sensor. It has some servo motors and we also bought a fan.
+						For the prototype, I am going to use the DFRobot ardublock kit which contains: ambient light sensor, infrared sensor, sound sensor, push buttons, rotation sensor. It has some servo motors and we also bought a fan. It contains also an I/O extension shield.
 					</aside>
 				</section>
 
 				<section>
 					<h2>Understand programming</h2>
 					<p>
-						Many open source software are dedicated to learn programming to kids : Scratsh, TurtleLogo, Ruby4Kids, Python4Kids...
-						See : Programatoo, Devoxx4Kids...
+						Many open source software are dedicated to learn programming to kids : Scratch, TurtleLogo, KidsRuby, Python4Kids...
+					</p>
+					<p>
+						Initiatives : Programatoo, Devoxx4Kids, greenlight, coding goûter...
 					</p>
 					<aside class="notes">
-						There are already many existing open source software for kids to learn programming. The most famous, TurtleLogo is for the eldest ones. More recently, Scratch has become more popular. These tools have different approaches.
+						Many different initiatives are arising to learn programming to kids. Theses movements use many different open source software for kids to learn programming. The most famous, TurtleLogo is for the eldest ones. More recently, Scratch has become more popular. These tools have different approaches.
 					</aside>
 				</section>
 
 				<section>
 					<h2>Text</h2>
 					<aside class="notes">
-						In TurtleLogo you write text to move a small turtle in order to draw something. No graphical UI, very simple language.
+						In TurtleLogo you write text to move a small turtle cursor in order to draw shapes. No graphical UI, very simple language.
 					</aside>
+					<img src="images/logo.png"/>
 				</section>
 <section>
 					<h2>Graphical</h2>
+					<img src="images/scratch.png"/>
 					<aside class="notes">
 						In Scratch you drag and drop elements from a palette to animate a character. This tool is a complete IDE which allows kids to create cartoons, video games, movies...
 					</aside>
@@ -149,8 +164,9 @@
 					<p>
 Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)  
 					</p>
+					<img src="images/eclipse.jpg"/>
 					<aside class="notes">
-						Eclipse is one of the most famous IDE. It is used by more than xxx persons everyday. So why kids do not use it also to learn electronics and programming? The Eclipse UI and default available languages as Java or C are to complex to discover programation.
+						Eclipse is one of the most famous IDE. It has million of uers. So why kids do not use it also to learn electronics and programming? The Eclipse UI and default available languages as Java or C are to complex to discover programation.
 					</aside>
 				</section>
 
@@ -160,39 +176,36 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 						Graphical programming & light UI
 					</p>
 					<aside class="notes">
-						The idea was to simplify the UI, the project lifecycle and to provide a graphical block language to be able to develop simple programs and run them on electronic modules.The purpose is not to provide a complete IDE but a tool giving the possibility to discover the effects a software program could have on electronic modules. 
+						The idea was to simplify the UI, the project lifecycle and to provide a graphical block language to be able to develop simple programs and run them on electronic modules. The purpose is not to provide a complete IDE but a tool giving the possibility to discover the effects a software program could have on electronic modules. 
 					</aside>
 				</section>
 				<section>
 					<h2>A simplified UI</h2>
 					<p>
 						No menu, only a  toolbar with 4 buttons activated according to what is possible
-						Dashboard
 					</p>
 					<aside class="notes">
-						The UI defines no menu just one toolbar with 4 different buttons to : manage project lifecycle, define the hardware modules used and to define the sketch that would be uploaded on the hardware platform. 
+						The UI defines no menu just one toolbar with 4 different buttons to : manage project lifecycle, define the hardware modules used and to define the sketch that would be uploaded on the hardware platform.
 					</aside>
 				</section>
 				<section>
-					<h2>Arduino designer : Dashboard</h2>
-					<p>
-						Show the process
-						<ul>
-							<ol>Define connection between hardware platform and modules</ol>
-							<ol>Describe the sketch</ol>
-							<ol>Upload on the target</ol>
+					<h2>Dashboard</h2>
+						<ul>Indicate the process :
+							<li>Define connection between hardware platform and modules</li>
+							<li>Describe the sketch</li>
+							<li>Upload on the target</li>
 						</ul>
-					</p>
 					<aside class="notes">
-						A dashboard helps the user by showing him what is the next step in the process development. The process is really simple in fact.
+						A dashboard helps the user by indicating what is the next step in the process development. The process is really simple in fact. The user must describe the connection between the hardware modules. Then he describes a sketch and finally he uploads the sketch to the target.
 					</aside>
 				</section>
 				
 				<section>
-					<h2>Arduino designer : Hardware</h2>
+					<h2>Hardware</h2>
 					<p>
 						Platform, Modules, Wire
 					</p>
+					<img src="images/hardware.png"/>
 					<aside class="notes">
 						First step, the kid defines the hardware platform he is using and the different sensors and actuators he connects to the Arduino. 
 					</aside>
@@ -203,6 +216,7 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 					<p>
 						Graphical block-based language
 					</p>
+					<img src="images/sketch.png"/>
 					<aside class="notes">
 						Then he describes the sketch which represents the software that would run on the hardware platform. And finally, he uploads the sketch to the target. 
 					</aside>
@@ -213,6 +227,7 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 					<p>
 						A tool to quickly define DSL based <strong>custom multi-view workbenches</strong> with dedicated representations
 					</p>
+					<img src="images/logo_Sirius.png"/>
 
 					<aside class="notes">
 				       	To develop the graphical designers I used Sirius. Sirius is a new project in Eclipse to quickly define multi view workbenches based on DSL with dedicated representations.
@@ -222,12 +237,7 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 					<h2>Why using Sirius ?</h2>
 						<ul>
 							<li>For the tool <em>development</em> phase : Dynamic & iterative (live) development</li>
-						</ul>
-						<img height="350" src="./images/vsm_runtime.png"/>
-							<li>For <em>kids</em> : </li>
-							<ul>
-								<li>Tooling adapted to the development of arduino small projects</li>
-							</ul>
+							<li>For <em>kids</em> : Tooling adapted to the development of arduino small projects</li>
 						</ul>
 
 					<aside class="notes">
@@ -237,19 +247,23 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
     					</aside>
 				</section>
 				<section>
-					<h2>Arduino designer development : Phase 1 - Arduino DSL</h2>
+					<h2>Arduino designer development</h2>
+					<h3>Phase 1 - Arduino DSL</h3>
 					<p>
 						DSL describing what are Arduino hardware modules and sketches
 					</p>
+					<img src="images/metamodel.png"/>
 					<aside class="notes">
 				       	First step in the development of the arduino designers : I defined a new DSL specific to Arduino which allows me to describe Arduino hardware and software sketches.
     					</aside>
 				</section>
 				<section>
-					<h2>Arduino designer development : Phase 2 - Arduino diagram specification</h2>
+					<h2>Arduino designer development</h2>
+					<h3>Phase 2 - Arduino diagram specification</h3>
 					<p>
 						Sirius specification
 					</p>
+					<img src="images/vsm.png"/>
 					<aside class="notes">
 				       	Second step, I defined the different kinds of representations I wanted. Then I mapped the different concepts defined in Arduino metamodel to graphical elements and defines the different tools provided by the designer.
     					</aside>
@@ -259,6 +273,7 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 					<p>
 						Blink a LED!
 					</p>
+					<img src="images/hello_world.jpg"/>
 					<aside class="notes">
 				       	For the first demo, I will blink a LED.
     					</aside>
@@ -269,6 +284,7 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 					<p>
 						A LED + push button
 					</p>
+					<img src="images/push_button.jpg"/>
 					<aside class="notes">
 				       	For the next demo, I will use a LED and connect it to a push button in order to switch on/off the LED according to the button is pressed or not.
     					</aside>
@@ -278,6 +294,7 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 					<p>
 						1 LED + programming language
 					</p>
+					<img src="images/fade_light.jpg"/>
 					<aside class="notes">
 				       	The next example demonstrates how to change the brightness of a LED in order to get a fading light.
     					</aside>
@@ -285,8 +302,9 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 				<section>
 					<h2>A more complex project</h2>
 					<p>
-						A robot
+						A pet robot
 					</p>
+					<img src="images/cat-robot.jpg"/>
 					<aside class="notes">
 				       	As you can see the Arduino designer allows to develop really simple projects. But thanks to the different function I already demonstrates I am able to build more complex projects. So why not to build a robot.
     					</aside>
@@ -294,26 +312,32 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 				<section>
 					<h2>Tigger</h2>
 					<aside class="notes">
-				       	I want to present you "Tigger". He is an electronic cat.
+				       	I want to present you my new electronic cat.
     					</aside>
+					<img src="images/tigger.png"/>
 				</section>
 				<section>
 					<h2>Many sensors and actuators</h2>
-					<p>
-						...
-					</p>
+					<img src="images/push_button2.jpg"/>
+					<img src="images/infrared.jpg"/>
+					<img src="images/servo.jpg"/>
+					<p><img src="images/dfrduino_uno.jpg"/></p>
+					<img src="images/led.jpg"/>
+					<img src="images/sound_sensor.jpg"/>
+					<img src="images/fan.jpg"/>
 					<aside class="notes">
-				       	He is made off many sensors and actuators.
+				       	He is made of many sensors and actuators.
     					</aside>
 				</section>
 				<section>
-					<h2>Use high technologic composite</h2>
+					<h2>Recycled high tech composite</h2>
 					<p>
-						...
+					<img src="images/carton.jpg"/>
+					<img src="images/scotch.jpg"/>
 					</p>
 					<aside class="notes">
-				       	To built him, I decided to use high technologic composite found in my rubbish. So is made of ...
-					What is he able to do ?
+				       	To built him, I decided to use high tech composite materials coming from my trash can. So he is made of carton and lots of scotch tape.
+					What this electronical catis able to do ?
     					</aside>
 				</section>
 				<section>
@@ -321,34 +345,52 @@ Complex UI, concepts (perpsectives, project lifecycle...), languages (Java, C)
 					<p>
 						Push button nose commands a blinking necklace
 					</p>
+					<img src="images/touch.jpg"/>
 					<aside class="notes">
-					
+					He can feel when you pushed is button nose and that will command its blinking necklace.
    					</aside>
 				</section>
 				<section>
 					<h2>See</h2>
 					<p>
-						Infrared sensor commands the servo-motored tail
+						Infrared sensor eye commands the servo-motored tail
 					</p>
+					<img src="images/see.jpg"/>
+					<aside class="notes">
+					He can see and that will command its servo-motored tail.
+   					</aside>
 				</section>
 				<section>
 					<h2>Hear</h2>
 					<p>
 						Sound sensor ear commands the bubble machine
 					</p>
+					<img src="images/bubbles.jpg"/>
+					<aside class="notes">
+					He can see and that will command its servo-motored tail.
+   					</aside>
 				</section>
-				<section>
-					<h2>More "Sirius" presentations</h2>
-					<p>
-						...
-					</p>
+				<section data-background="images/sirius.jpg">
+					<h2 style="color:white;">More "Sirius" presentations</h2>
+					<ul style="color:white;">
+                                                <li>Wednesday
+                                                        <ul>
+                                                                <li>14:30 - Changing the Game of Systems Architecture</li>
+                                                                <li>16:15 - Sirius By Example</li>
+                                                                <li>17:00 - EcoreTools 2.0: The Making Of</li>
+                                                                <li>19:00 - BOF "Let's get Sirius"</li> 
+                                                        </ul>
+                                                </li>
+                                                <li>At any time: ask us or visit Obeo booth</li>
+                                        </ul>
 				</section>
-				<section>
-					<h2>Thanks! Questions?</h2>
-					<p>
+				<section data-background="images/bubbles2.jpg">
+					<h1 style="color:black;">Thanks! Questions?</h1>
+					<h3 style="color:black;">
 						Clap your hands to make more bubbles!
 						And maybe ask questions...
-					</p>
+					</h3>
+					<h4 style="color:black;margin:50px;padding:0px;">Don't forget to give feedback <img src="images/feedback.png" style="padding-left:50px;padding-right:50px;margin-top:-20px;position:relative;top:20px;width:150px;border:0px solid black;"/></h4>
 				</section>
 			</div>
 		</div>
