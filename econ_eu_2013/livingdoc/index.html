@@ -39,7 +39,7 @@
 			<div class="slides">
 				<section>
 					<aside class="notes">
-					MEB : My purpose today is to share with you our motivation to develop and use a living documentation tool. At the beginning of this project, our need was to improve the documentation existing on a software project we are developping at Obeo, which is named UML Designer. This project is an Eclipse product based on Sirius providing graphical designer to create UML diagrams. At that time, this project was poorly documented. There was no specification, it only exists some unit and UI tests and some user documentation. The idea was to write a documentation that will be useful during the all project lifecycle.
+					MEB : My purpose today is to share with you our motivation to develop and use a living documentation tool. At the beginning of this project, our need was to improve the documentation existing on a software project we are developping at Obeo, which is named UML Designer. At that time, this project was poorly documented. There was no specification, it only exists some unit and UI tests and some user documentation. Our need was to write a specification that will be useful during the all project lifecycle.
 					</aside>
 					<h1>Living Documentation</h1>					
 					<img src="img/livingdoc-01.jpg" style="border:0px solid black;width:650px"/>
@@ -48,18 +48,22 @@
 
 				<section>
 					<aside class="notes">
-					MEB : Most of the time in software projects, documentation is a sloppy task. The problem is that many developpers don't like to write documentation. Often they does not have time to write documentation and when they take or have the time to write it, they feel like if they are loosing their time, as this documentation will never be updated later. That's completly true, spending time to write a documentation that will never be updated is useless! As developper we paid attention to write and maintain tests up to date but it is not the case for the documentation. Updating the documentation is considered as a boring task. You have to open another software, to edit the documentation and then you have to find manually which parts of the documentation should be updated. How could we improve this in order that the documentation become more easy to maintain up to date?
+					MEB : Most of the time in software projects, documentation is a sloppy task. The problem is that many developpers don't like to write documentation. Often they does not have time to write it. When they take or have the time to do it, they feel like if they are loosing their time, as they know that this documentation will never be updated later. That's completly true, spending time to write a documentation that will never be updated is useless! As developper we pay attention to write and maintain tests up to date but it is not the case for the documentation. Updating the documentation is considered as a boring task. You have to open another software, to edit the documentation and then you have to find manually which parts of the documentation should be updated. How could we improve this in order that the documentation become more easy to maintain up to date?
 					</aside>
 					<h2>The reality</h2>
 					<p>
 						Write once...and never look at again
+						<ul>
+							<li>Writing documentation = loosing my time</li>
+							<li>Updating documentation = boring task</li>
+						</ul>
 					</p>
 					<img src="img/wasted_paper.jpg" style="border:0px solid black;width:600px"/>
 				</section>
 
 				<section>
 					<aside class="notes">
-					MEB : When I start working on this, my idea was to find a way to make the documentation & the tests evolving hand in hand. The main problem was that all the different artifacts of a software project (code, tests, requirements) have NOT the SAME LIFECYCLE. The different persons working on a project could update the different artifacts independently. But this generates outdated documents regarding the code and the tests. What good is a requirement if when you change it you cannot retrieve which functional test should be updated? What I need is a tool to cross-link & synchronize all the project's artifacts to get a consistent documentation at any moment.
+					MEB : When I start working on this, my idea was to find a way to make my specification & the tests evolving hand in hand. The main problem was that all the different artifacts of a software project (code, tests, requirements) have NOT the SAME LIFECYCLE. The different persons working on a project could update the different artifacts independently. But this generates outdated documents regarding the code and the tests. What good is a requirement if when you change it you cannot retrieve which functional test should be updated? What I need is a tool to cross-link & synchronize all the project's artifacts to get a consistent documentation at any moment.
 					</aside>
 					<h2>The theory</h2>
 					<p>
@@ -146,7 +150,7 @@
 				</section>
 				<section>
 					<aside class="notes">
-					MEB : Next step was to find a way to describe these features in order then to re-use the information to generate the tests. According to BDD, we decided to keep 3 different concepts : feature, story and scenario. The features are logical groups of stories. A story specifies who is the stakeholder, which effects it should cause and what business value the stakeholder will get from this effect. A scenario is an acceptance tests used to determine if a requirement/a story is met. Thanks to this process, all the features of our software must be described and linked to acceptance tests. We use the Gherkin syntax to formalize, the acceptance criterias. It starts by specifying the initial context, then defines which triggers start the scenario and finally describes the expected effects. 
+					MEB : Next step was to find a way to describe these features in order then to re-use the information to generate the tests. According to BDD, we decided to keep 3 different concepts : feature, story and scenario. The features are logical groups of stories. A story specifies who is the stakeholder, which effects it should cause and what business value the stakeholder will get from this effect. A scenario is an acceptance tests used to determine if a requirement is met. Thanks to this process, all the features of our software must be described and linked to acceptance tests. We use the Gherkin syntax to formalize, the acceptance criterias. It starts by specifying the initial context, then defines which triggers start the scenario and finally describes the expected effects. 
 					</aside>
 					<h2>BDD</h2>
 					<p>
@@ -191,8 +195,8 @@
 				</section>
 				<section>
 					<aside class="notes">
-					MEB : But, as the code of the application is written in Java, I tried JBehave which is an equivalent to cucumber but adapted to Java code. As UML Designer is an Eclipse product, it was not so easy to integrate JBehave in our development and current test process. And the scenario definition was still to close to the Java code.
-					</aside>
+					MEB : But, as the code of the application is written in Java, I tried JBehave which is an equivalent to cucumber but adapted to Java code. The problem with JBehave is that the scenario definition is still to close to the Java code and we want that anybody could understand the tests. Moreover, we might use this solution also to document non Java projects.
+					</aside> 
 					<h2>Had a look on...</h2>
 					<p>
 						JBehave = adapted for java
@@ -204,7 +208,7 @@
 
 				<section>
 					<aside class="notes">
-					MEB : Another solution could be Jnario. Jnario is also a cucumber like software to write concise tests to document the behaviour of Java programs. It is well integrated to JUnit and Eclipse. Jnario automatically generates the Java tests code from the specification. The problem is that, to test our project we have different kind of tests : unit, plugin and UI tests. These tests run with different kind of launchers, and as for UI tests we are using SWTBot, it is possible but not simple to integrate it to Jnario. Even more important, we need a way to synchronize not only specification and tests but also other kind of project artifacts (User documentation, Sirius specification...).
+					MEB : Another solution could be Jnario. Jnario is also a cucumber like software to write concise tests to document the behaviour of Java programs. It is well integrated to JUnit and Eclipse. It automatically generates the Java tests code from the specification. The problem is that, to test our project we have different kind of tests : unit, plugin and UI tests. These tests run with different kind of launchers, and as for UI tests we are using SWTBot, it is possible but not simple to integrate it to Jnario. Even more important, we need a way to synchronize not only specification and tests but also other kind of project artifacts (User documentation, Sirius specification...). Another problem for us is that with Jnario you have to update the documentation to update the tests. And we wnat to keep different lifecycle for code and documentation.
 					</aside>
 					<h2>Gave a try to...</h2>
 					<p>
@@ -215,7 +219,7 @@
 
 				<section>
 					<aside class="notes">
-					MEB : We decided to develop our own tool but inspired by all the previous ones I described. We keep the Gherkin syntax to make test writing accessible to functional users. Then our ideas was to generate the code from the test specifications. We need also to be able to link the specifications with any other kind of artifacts not only code. And the most important point, we need to known when one of these artifacts has to be updated. Finally, we want to automate some guidelines validation to be sure that our documentation contains all the information we expect and to help the user to write good documentatin.  
+					MEB : We decided to develop our own tool but inspired by all the previous ones I described. We keep the Gherkin syntax to make test writing accessible to functional users. Then our idea was to generate the code from the test specifications. We need also to be able to link the specifications with any other kind of artifacts not only code. And the most important point, we need to known when one of these artifacts has to be updated.
 					</aside>
 					<h2>Why yet another solution ?</h2>
 					<ul>
@@ -223,31 +227,7 @@
 						<li>Generate code from test specifications</li>						
 						<li>Link specs with other artifacts</li>
 						<li>Know when documentation or tests should be updated</li>
-						<li>Need to automate guidelines validation</li>
 					</ul>
-				</section>
-
-				<section>
-					<aside class="notes">
-						ALA: We decided to create the Intent project because we realized that most of software documentation is outdated (i.e. contains 
-						information that does not reflect the latest state of the software). And outdated documentation is worse than no documentation at all:
-						although you spent a lot of time and effort trying to document your software, now your doc can mislead the reader. 
-						Sooner or later, no one will read your documentation anymore and hence it will become useless.<br/>
-						Then we asked ourselves: why is documentation so often outdated? Well this is the inconvenient truth about documentation: 
-						updating it is a burden. When you make a modification on the code, how many of you take the time to browse through the hundred
-						of pages of documentation just to find out the little documentation parts to need to be updated, and check for the whole doc 
-						consistency afteward? No one, and that's how documentation gets unsynchronized.<br/>
-						How come, in 2013, performing a task as simple as updating documentation when the code changes is so 
-						painful and error-prone?<br/>		
-					</aside>
-					<h2>Mylyn Intent: origins</h2>
-					<p>		
-						Outdated doc is useless (or worse)...<br/>
-						Documentation update is a burden...<br/>
-						<img src="img/intent_doc_monster.png" class="reflectImg" style="border:0px solid black;width:450px;"/>
-						<br/>
-						
-					</p>
 				</section>
 				<section>
 					<aside class="notes">						
@@ -398,10 +378,18 @@
 							}</div>
 					</div>
 				</section>
-				
 				<section>
 					<aside class="notes">
-						But enough with the chit-chat, let's see how this Living Documentation tool works on a concrete example.
+						ALA : 
+					</aside>
+					<h2>Living Doc toolchain</h2>
+					<p>
+						TODO schema
+					</p>
+				</section>
+				<section>
+					<aside class="notes">
+						ALA : But enough with the chit-chat, let's see how this Living Documentation tool works on a concrete example.
 						ALA : environement description
 					</aside>
 					<h2>Living Doc in Action : Environment</h2>
@@ -419,7 +407,7 @@
 				
 				<section>
 					<aside class="notes">
-						MEB: In the demo, we will show you part of the UML Designer specification. How to specify a new feature in the Intent document and as UML Designer is based on Sirius, we will demonstrate also how to link the specification with the Sirius specification model. Then, we will show how we generate the test structure from the specification and finally the synchronization mechanism between all these artifacts.
+						MEB: In the demo, we will show you part of the UML Designer specification. We demonstrate how to specify a new feature in the Intent document. Then, we will generate the test structure from the specification and finally we show the synchronization mechanism. So let's start the demo.
 					</aside>
 					<h2>Living Doc in Action : Scenario</h2>
 					<p>
@@ -440,7 +428,7 @@
 				
 				<section>
 					<aside class="notes">
-						ALA:  ???
+						ALA:  Demo doc edition
 					</aside>
 					<h2 style="background-color:white;color:black">Doc edition</h2>
 					<h3>Mylyn Intent</h3>
@@ -455,7 +443,7 @@
 				</section>
 				<section>
 					<aside class="notes">
-						MEB:  ???
+						MEB:  Now we add a new scenario in the Intent document thanks to the Gherkin syntax.
 					</aside>
 					<h2 style="background-color:white;color:black">Defining Scenarios</h2>
 					<h3>Living doc bridge</h3>					
@@ -465,13 +453,15 @@
 					</ul>
 				</section>
 				<section>
+					<aside class="notes">
+						ALA: Demo links & parse
+					</aside>
 					<h2 style="background-color:white;color:black">Toward executable scenarios</h2>
-	
-						<h3>Living doc bridge</h3>
-						<ul>							
-							<li>creates links from doc to tests (warning if not exist)</li>
-							<li>parse a Specification model out of documentation</li>
-						</ul>
+					<h3>Living doc bridge</h3>
+					<ul>							
+						<li>creates links from doc to tests (warning if not exist)</li>
+						<li>parse a Specification model out of documentation</li>
+					</ul>
 					
 					<p><br/>
 						&rarr; Let's generate the tests from Spec model
