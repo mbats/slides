@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="925.39191"
+   height="400"
+   id="svg3656"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="logo_v1.svg">
+  <defs
+     id="defs3658">
+    <filter
+       id="filter5285"
+       inkscape:label="Monochrome transparency"
+       inkscape:menu="Transparency utilities"
+       inkscape:menu-tooltip="Convert to a colorizable transparent positive or negative"
+       height="1"
+       width="1"
+       y="0"
+       x="0"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix5287"
+         type="luminanceToAlpha"
+         result="fbSourceGraphic" />
+      <feFlood
+         id="feFlood5289"
+         flood-color="rgb(38,30,88)"
+         result="result1"
+         in="fbSourceGraphic"
+         flood-opacity="1" />
+      <feComposite
+         id="feComposite5291"
+         in2="fbSourceGraphic"
+         operator="out"
+         result="result2" />
+      <feComposite
+         id="feComposite5293"
+         in2="SourceGraphic"
+         operator="in" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="234.19998"
+     inkscape:cy="110.36754"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     showborder="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1680"
+     inkscape:window-height="1028"
+     inkscape:window-x="1358"
+     inkscape:window-y="43"
+     inkscape:window-maximized="1"
+     inkscape:snap-global="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata3661">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-149.61,124.2458)">
+    <rect
+       inkscape:export-ydpi="300"
+       inkscape:export-xdpi="300"
+       inkscape:export-filename="Z:\private\marketing\Design\ChartesGraphiques\Sirius\v1\logo\png\logo_Sirius.png"
+       y="-124.2458"
+       x="149.61"
+       height="400"
+       width="925.39191"
+       id="rect3885"
+       style="fill:#ffffff;fill-opacity:1" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       x="-44.642857"
+       y="141.29076"
+       id="text5408"
+       sodipodi:linespacing="125%"><tspan
+         sodipodi:role="line"
+         id="tspan5410"
+         x="-44.642857"
+         y="141.29076" /></text>
+    <g
+       id="g3824"
+       transform="matrix(2.7462206,0,0,2.7462206,-484.48943,-536.27632)">
+      <g
+         transform="translate(-7.5188956,3.2771088e-6)"
+         inkscape:export-ydpi="90"
+         inkscape:export-xdpi="90"
+         inkscape:export-filename="Z:\private\marketing\Design\ChartesGraphiques\Sirius\v1\logo\png\logo_Sirius_v1.png"
+         id="g3887">
+        <g
+           id="g3068"
+           transform="matrix(0.79367327,0,0,0.79367327,165.05672,453.69735)"
+           inkscape:export-filename="Z:\private\marketing\Design\ChartesGraphiques\Sirius\v1\logo\png\logo_Sirius.png"
+           inkscape:export-xdpi="90"
+           inkscape:export-ydpi="90">
+          <g
+             transform="matrix(1.2188869,0.32659977,-0.32659977,1.2188869,-381.66219,-429.89519)"
+             id="g3070"
+             style="fill:#7269a4;fill-opacity:1">
+            <g
+               id="g3818">
+              <path
+                 inkscape:connector-curvature="0"
+                 id="path3072"
+                 d="m 460.03637,9.11643 c 13.31834,0 25.10881,6.51065 32.40625,16.500001 -8.41129,-6.499125 -19.83024,-10.5 -32.40625,-10.5 -12.60304,0 -24.02109,4.007368 -32.43749,10.53125 C 434.89406,15.636126 446.70064,9.11643 460.03637,9.11643 z"
+                 style="fill:#7269a4;fill-opacity:1;stroke:none" />
+              <path
+                 inkscape:connector-curvature="0"
+                 id="path3074"
+                 d="m 444.13012,-6.78982 c 0,-13.31834 -6.51065,-25.10881 -16.5,-32.40625 6.49913,8.41129 10.5,19.83024 10.5,32.40625 0,12.60305 -4.00737,24.02109 -10.53125,32.4375 10.01156,-7.29518 16.53125,-19.10176 16.53125,-32.4375 z"
+                 style="fill:#7269a4;fill-opacity:1;stroke:none" />
+            </g>
+            <path
+               transform="matrix(-0.0359422,0.08612392,-0.08612392,-0.0359422,606.34142,-18.790924)"
+               inkscape:transform-center-y="0.14446206"
+               inkscape:transform-center-x="-0.7836761"
+               d="m 827.31496,1498.8497 -70.63435,-42.9724 -77.85807,27.8201 42.97236,-70.6343 -27.82007,-77.8581 70.63435,42.9723 77.85807,-27.82 -42.97235,70.6343 z"
+               inkscape:randomized="0"
+               inkscape:rounded="0"
+               inkscape:flatsided="false"
+               sodipodi:arg2="1.6724852"
+               sodipodi:arg1="0.88708702"
+               sodipodi:r2="39.051735"
+               sodipodi:r1="105.54523"
+               sodipodi:cy="1417.0273"
+               sodipodi:cx="760.6449"
+               sodipodi:sides="4"
+               id="path3076"
+               style="fill:#7269a4;fill-opacity:1;stroke:none"
+               sodipodi:type="star" />
+          </g>
+          <g
+             id="g3078"
+             style="fill:#261e58;fill-opacity:1"
+             transform="matrix(1.2618846,0,0,1.2618846,140.66045,-190.1094)">
+            <path
+               inkscape:connector-curvature="0"
+               id="path3080"
+               d="M 41.499497,-97.506203 C 28.634959,-100.95325 18.93132,-110.29365 14.467968,-121.83134 c 6.442584,8.45468 16.436951,15.27467 28.584444,18.52958 12.173601,3.26191 24.239765,2.34629 34.057897,-1.77696 -9.637785,7.782288 -22.729486,11.024058 -35.610812,7.572517 z"
+               style="fill:#261e58;fill-opacity:1;stroke:none" />
+            <path
+               inkscape:connector-curvature="0"
+               id="path3082"
+               d="m 52.746915,-78.025105 c -3.447041,12.864529 -0.209843,25.938326 7.550414,35.572536 -4.100669,-9.806769 -5.00978,-21.872132 -1.754869,-34.019624 3.261909,-12.173612 10.087938,-22.165408 18.567849,-28.606527 -11.558546,4.45542 -20.911851,14.172279 -24.363394,27.053615 z"
+               style="fill:#261e58;fill-opacity:1;stroke:none" />
+            <path
+               sodipodi:type="star"
+               style="fill:#261e58;fill-opacity:1;stroke:none"
+               id="path3084"
+               sodipodi:sides="4"
+               sodipodi:cx="760.6449"
+               sodipodi:cy="1417.0273"
+               sodipodi:r1="105.54523"
+               sodipodi:r2="39.051735"
+               sodipodi:arg1="0.88708702"
+               sodipodi:arg2="1.6724852"
+               inkscape:flatsided="false"
+               inkscape:rounded="0"
+               inkscape:randomized="0"
+               d="m 827.31496,1498.8497 -70.63435,-42.9724 -77.85807,27.8201 42.97236,-70.6343 -27.82007,-77.8581 70.63435,42.9723 77.85807,-27.82 -42.97235,70.6343 z"
+               inkscape:transform-center-x="-0.47838189"
+               inkscape:transform-center-y="0.088204766"
+               transform="matrix(-0.03479924,0.04510252,-0.04510252,-0.03479924,136.47445,-70.942582)" />
+          </g>
+        </g>
+        <text
+           xml:space="preserve"
+           style="font-size:66.9691391px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#261e58;fill-opacity:1;stroke:none;font-family:Merriweather Sans;-inkscape-font-specification:Merriweather Sans Bold"
+           x="356.76849"
+           y="255.87965"
+           id="text3380"
+           sodipodi:linespacing="125%"><tspan
+             sodipodi:role="line"
+             id="tspan3382"
+             x="356.76849"
+             y="255.87965">Sirius</tspan></text>
+      </g>
+    </g>
+    <g
+       transform="translate(780,0)"
+       id="g3930"
+       inkscape:export-filename="Z:\private\marketing\Design\ChartesGraphiques\Sirius\v1\logo\png\logo_Sirius_v1.png"
+       inkscape:export-xdpi="90"
+       inkscape:export-ydpi="90" />
+  </g>
+</svg>
