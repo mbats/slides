@@ -12,21 +12,21 @@
 
 			#notes {
 				font-size: 24px;
-				width: 640px;
+				width: 768px;
 				margin-top: 5px;
 				clear: left;
 			}
 
 			#wrap-current-slide {
-				width: 640px;
-				height: 512px;
+				width: 224px;
+				height: 179px;
 				float: left;
 				overflow: hidden;
 			}
 
 			#current-slide {
-				width: 1280px;
-				height: 1024px;
+				width: 448px;
+				height: 358px;
 				border: none;
 
 				-webkit-transform-origin: 0 0;
@@ -43,16 +43,16 @@
 			}
 
 			#wrap-next-slide {
-				width: 448px;
-				height: 358px;
+				width: 224px;
+				height: 179px;
 				float: left;
 				margin: 0 0 0 10px;
 				overflow: hidden;
 			}
 
 			#next-slide {
-				width: 1280px;
-				height: 1024px;
+				width: 700px;
+				height: 512px;
 				border: none;
 
 				-webkit-transform-origin: 0 0;
@@ -139,11 +139,11 @@
 	<body>
 
 		<div id="wrap-current-slide" class="slides">
-			<script>document.write( '<iframe width="1280" height="1024" id="current-slide" src="'+ window.opener.location.href +'"></iframe>' );</script>
+			<script>document.write( '<iframe width="320" height="256" id="current-slide" src="'+ window.opener.location.href +'"></iframe>' );</script>
 		</div>
 
 		<div id="wrap-next-slide" class="slides">
-			<script>document.write( '<iframe width="640" height="512" id="next-slide" src="'+ window.opener.location.href +'"></iframe>' );</script>
+			<script>document.write( '<iframe width="320" height="256" id="next-slide" src="'+ window.opener.location.href +'"></iframe>' );</script>
 			<span>UPCOMING:</span>
 		</div>
 
