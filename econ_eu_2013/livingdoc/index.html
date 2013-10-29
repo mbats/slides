@@ -48,7 +48,7 @@
 
 				<section>
 					<aside class="notes">
-					MEB : Most of the time in software projects, documentation is a sloppy task. The problem is that many developpers don't like to write documentation. Often they does not have time to write it. When they take or have the time to do it, they feel like if they are loosing their time, as they know that this documentation will never be updated later. That's completly true, spending time to write a documentation that will never be updated is useless! As developper we pay attention to write and maintain tests up to date but it is not the case for the documentation. Updating the documentation is considered as a boring task. You have to open another software, to edit the documentation and then you have to find manually which parts of the documentation should be updated. How could we improve this in order that the documentation become more easy to maintain up to date?
+					MEB : Most of the time in software projects, documentation is a sloppy task. The problem is that many developpers don't like to write documentation. Often they does not have time to write it. When they take or have the time to do it, they feel like if they are loosing their time, as they know that this documentation will never be updated later. That's completly true, spending time to write a documentation that will never be updated is useless! As developper we pay attention to write and maintain tests up to date but it is not the case for the documentation. Updating the documentation is considered as a boring task. You have to open another software, to edit the documentation and then you have to find manually which parts of the documentation should be updated. How could we improve this in order that the documentation become easier to maintain up to date?
 					</aside>
 					<h2>The reality</h2>
 					<p>
@@ -97,7 +97,7 @@
 
 				<section>
 					<aside class="notes">
-					MEB : In fact what we want is not to test the code but we want to validate the behaviour of the software. This means that everyone should be able to understand and participate to the tests : Developpers or end users.
+					MEB : In fact what we want is not to test the code but we want to validate the behaviour of the software. This means that everyone should be able to understand and participate to the tests : Developpers or functional users.
 					</aside>
 					<h2>Everyone should participate</h2>
 					<p>
@@ -208,7 +208,7 @@
 
 				<section>
 					<aside class="notes">
-					MEB : Another solution could be Jnario. Jnario is also a cucumber like software to write concise tests to document the behaviour of Java programs. It is well integrated to JUnit and Eclipse. It automatically generates the Java tests code from the specification. The problem is that, to test our project we have different kind of tests : unit, plugin and UI tests. These tests run with different kind of launchers, and as for UI tests we are using SWTBot, it is possible but not simple to integrate it to Jnario. Even more important, we need a way to synchronize not only specification and tests but also other kind of project artifacts (User documentation, Sirius specification...). Another problem for us is that with Jnario you have to update the documentation to update the tests. And we wnat to keep different lifecycle for code and documentation.
+					MEB : Another solution could be Jnario. Jnario is also a cucumber like software to write concise tests to document the behaviour of Java programs. It is well integrated to JUnit and Eclipse. It automatically generates the Java tests code from the specification. The problem is that, to test our project we have different kind of tests : unit, plugin and UI tests. These tests run with different kind of launchers, and as for UI tests we are using SWTBot, it is possible but not simple to integrate it to Jnario. Even more important, we need a way to synchronize not only specification and tests but also other kind of project artifacts (User documentation, Sirius specification model...). Another problem for us is that with Jnario you have to update the documentation to update the tests. And we want to keep different lifecycle for code and documentation.
 					</aside>
 					<h2>Gave a try to...</h2>
 					<p>
@@ -341,7 +341,7 @@
 				</section>
 				<section data-transition="fade" data-transition-speed="slow">
 					<aside class="notes">
-						And, in addition to these pure documentation zones, the Intent documetn also contains formal links zones. This is these zones that 
+						And, in addition to these pure documentation zones, the Intent document also contains formal links zones. This is these zones that 
 						allow us to reference technical arftifacts. Notice that the behavior of those zones is highly customizable: you can change the 
 						way they are displayed in the Intent editor, change the behavior of the hyperlinks, plug custom validation rules on the referenced
 						artifacts...
@@ -468,7 +468,7 @@
 				</section>
 				<section>
 					<aside class="notes">
-						MEB:  Now we will add a new scenario in the Intent document thanks to the Gherkin syntax. First we define a new feature. A feature could be linked to a parent feature. After, this we define a new story which reference the feature we just created. Then we create a new scenario. We have to define the context, in the "when" we describe the event which starts the scenario and in the "then" the assertions that must be verified.
+						MEB:  Now we will add a new scenario in the Intent document thanks to the Gherkin syntax. First we define a new feature. A feature could be linked to a parent feature. After, this we define a new story which reference the feature we just created. Then we create a new scenario. The "given" is used to define the context, in the "when" we describe the event which starts the scenario and in the "then" we define the assertions that must be verified.
 					</aside>
 					<h2 style="background-color:white;color:black">Defining Scenarios</h2>
 					<h3>Living doc bridge</h3>					
