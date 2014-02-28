@@ -373,36 +373,64 @@
 					</div>
 				</section>
 				<section>
-					<h2>Living documentation toolchain</h2>
+					<h2>Living documentation toolchain</h2>7
+					<aside class="notes">
+						First we have our Intent document, which contains the functional specification of UML Designer.
+					</aside>
 					<img src="img/toolchain/schema-01.png"/>
+
 				</section data-transition="fade" data-transition-speed="slow">
 				<section data-transition="fade" data-transition-speed="slow">
 					<h2>Living documentation toolchain</h2>
+					<aside class="notes">
+						Then we have the UML Designer code itself. Most of UML Designer behavior is expressed through a Sirius VSM...
+					</aside>
 					<img src="img/toolchain/schema-02.png"/>
 				</section>
 				<section data-transition="fade" data-transition-speed="slow">
 					<h2>Living documentation toolchain</h2>
+					<aside class="notes">
+						Thanks to the formal link mechanism we saw earlier, each part of the UML Designer Specification references the modelk elements & code...
+					</aside>
 					<img  src="img/toolchain/schema-03.png"/>
 				</section>
 				<section data-transition="fade" data-transition-speed="slow">
 					<h2>Living documentation toolchain</h2>
+					<aside class="notes">
+						We also have a Living DOcumentation Bridge, which customizes and provides additional behavior for our use case.
+						We have additional completion to help you write your Gerkins syntax
+						Custom validation rules (we will see them in the demo)
+						And a doc parser...
+					</aside>
 					<img src="img/toolchain/schema-04.png"/>
 				</section>
 				<section data-transition="fade" data-transition-speed="slow">
 					<h2>Living documentation toolchain</h2>
 					<img src="img/toolchain/schema-05.png"/>
+					<aside class="notes">
+						... that parses the gerkins definition and create a specificaiton model.
+					</aside>
 				</section>
 				<section data-transition="fade" data-transition-speed="slow">
 					<h2>Living documentation toolchain</h2>
 					<img src="img/toolchain/schema-06.png"/>
+					<aside class="notes">
+						From this specification model, we have Acceleo generators that generate the java tests structure out of the gerkin specificaitons.
+					</aside>
 				</section>
 				<section data-transition="fade" data-transition-speed="slow">
 					<h2>Living documentation toolchain</h2>
 					<img src="img/toolchain/schema-07.png"/>
+					<aside class="notes">
+						Of course those tests are referenced inside the Intent documentation.
+					</aside>
 				</section>
 				<section data-transition="fade" data-transition-speed="slow">
 					<h2>If UML Designer Code changes</h2>
 					<img src="img/toolchain/schema-change1.png"/>
+					<aside class="notes">
+						Modif => links => on sait quoi updater
+					</aside>
 				</section>
 				<section data-transition="fade" data-transition-speed="slow">
 					<h2>If UML Designer Tests change</h2>
@@ -432,7 +460,9 @@
 				
 				<section>
 					<aside class="notes">
-						MEB: In the demo, we will show you part of the UML Designer specification. We demonstrate how to specify a new feature in the Intent document. Then, we will generate the test structure from the specification and finally we show the synchronization mechanism. So let's start the demo.
+						MEB: In the demo, we will show you part of the UML Designer specification.
+						We demonstrate how to specify a new feature in the Intent document. Then, we will generate 
+						the test structure from the specification and finally we show the synchronization mechanism. So let's start the demo.
 					</aside>
 					<h2>Living Doc in Action : Scenario</h2>
 					<p>
