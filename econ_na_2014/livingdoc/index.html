@@ -616,7 +616,7 @@ Let's say that the change is valid, and mark the issue as merged (quick-fix "Mar
 							</li>
 						</ul>
 				</section>
-				<section>
+				<section data-transition="fade" data-transition-speed="slow">
 					<aside class="notes">
 Notice that this synchronization mechanism works for any kind of artifact. For instance, let's say that we decide to modify a test (Ctrl-click on last java link, add a line "// Some test modification").
 Intent will raise a synchronization issue, that again we can visualize graphically (Quick fix "See All differences"). This time, let's say that I decide that this modification breaks the specification, and should not be integrated. As soon as I roll-back it (Undo modif & save), the synchronization issue disappears as my code & doc are now up-to-date.
@@ -633,7 +633,7 @@ Intent will raise a synchronization issue, that again we can visualize graphical
 							</li>
 						</ul>
 				</section>
-<section>
+<section data-transition="fade" data-transition-speed="slow">
 					<aside class="notes"> 
 Last but not least, if I decide to modify my specifications...("an Attribute" by  "an Attribute and an Operation" in When and Then) and re-generate the tests... (re-generate from spec)
 I've got another synchronization issue because my context methods have changed. (sync issues "See All differences")
