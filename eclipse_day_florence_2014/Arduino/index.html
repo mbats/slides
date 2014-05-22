@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Turning Eclipse into an Arduino programming platform for kids</title>
+
+		<meta name="description" content="Turning Eclipse into an Arduino programming platform for kids">
+		<meta name="author" content="Mélanie Bats">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section data-background="images/arduino-eye.jpg">
+					<h2>Turning Eclipse into an Arduino programming platform for kids</h2>
+					<p>
+						<small>Mélanie Bats / Obeo</small>
+					</p>
+					<aside class="notes">
+				        Hi
+					I'm here to present you the developments I did to try to turn the Eclipse IDE into an Arduino programming platform for kids.
+    					</aside>
+				</section>
+
+				<section>
+					<h2>Curiosity</h2>
+					<p>
+						Explore, question and learn
+					</p>
+					<img src="images/curiosity2.jpg" class="stretch"/>
+					<aside class="notes">
+						Children are such curious creatures. They explore, question, and wonder, and by doing so, learn. From the moment of birth, likely even before, humans are meant to learn new things. When we are curious about something new, we want to explore it.
+					</aside>
+				</section>
+	
+
+				<section>
+					<h2>Discover by yourself</h2>
+					<p>
+						Explore to understand cause and effects.
+					</p>
+					<img src="images/discover2.jpg" class="stretch"/>
+					<aside class="notes">
+					A good way to discover is to explore by yourself, trying, encountering success and failures. This way, kids learn causes and effects.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Computers are everywhere</h2>
+					<p>
+						To understand the world, you need to understand how computers work
+					</p>
+					<img src="images/computer.jpg" class="stretch"/>
+					<aside class="notes">
+					Today, the world is made of computers. At home, in TVs, DVD players, coffee machines, electronic toys, pet robots... outside in cars, planes, phones... Nowadays kids are used to play with tablets and computers. They are curious to understand how a video game is created, how computers works and what is electronic...
+					</aside>
+				</section>
+
+				<section>
+					<h2>Understand electronics</h2>
+					<p>
+						Play with sensors and actuators
+					</p>
+					<img src="images/electronics.jpg" class="stretch"/>
+					<aside class="notes">
+						So one of the thing kids have to learn is electronics. The idea to learn electronics for  them is mostly to understand that they can use sensors to listen to the environment and that it exists actuators with which they can interact. We expect that they understand that these modules are connected to a platform which contains software.
+					</aside>
+
+				</section>
+
+				<section>
+					<h2>Open hardware</h2>
+
+					<img src="images/open-hardware.jpg" class="stretch"/>
+					<aside class="notes">
+						Nowadays, it is really easy to get good material to learn electronics thanks to the open hardware initiative. What is open hardware ? Open source hardware is a licensing agreement for electromechanical projects. That is to say, electronics and robotics and other mechanical projects are open hardware if they are documented and published under an open hardware license.
+					</aside>
+				</section>
+				<section>
+					<h2>Electronic for kids</h2>
+					<p>
+						Open hardware dedicated to kids learning electronics : <a href="http://littlebits.com/">littleBits<a/>
+					</p>
+					<img src="images/littlebits.jpg" class="width:500px"/>
+					<aside class="notes">
+						The problem with electronic is that it is most of the time small things. So it is not so easy for kids to manipulate. And it is so easy to do a bad connection and just damage your electronic module. An open hardware company proposed really cool electronic modules to solve this issue. littleBits is an opensource library of electronic modules that snap together with tiny magnets. There is no soldering, no wiring, no programming. It's great to understand electronics but not to understand programming and to perceive and comprehend the connection between software and hardware modules.
+					</aside>
+				</section>
+				<section>
+					<h2>Arduino</h2>
+					<p>
+						<a href="http://www.arduino.cc/"><img src="images/dfrduino_uno.jpg" class="stretch"/></a>
+					</p>
+					<aside class="notes">
+						 The most famous open hardware platform is Arduino. With Arduino you get a piece of hardware, but also documentation and a development environment that fits all together with hardware. The arduino board is like a small computer that can be programmed as many times as needed. As a computer, it provides I/O interaction, through digital and analog pins. Arduino can sense the environment by receiving input from a variety of sensors and can affect its surroundings by controlling lights, motors, and other actuators. The microcontroller on the board is an Atmel AVR microcontroller and usually is programmed using the Arduino programming language and the Arduino development environment.
+					</aside>
+				</section>
+				<section>
+					<h2>Arduino kits</h2>
+					<p>
+						Cheap, easy to find thanks to many different providers : <a href="http://www.adafruit.com/">AdaFruit</a>, <a href="http://www.dfrobot.com">DFRobot</a>, <a href="http://www.seeedstudio.com">SeeedStudio</a>, <a href="http://snootlab.com/">SnootLab</a>, ...
+					</p>
+					<p>
+						So many kinds of modules available!
+					</p>
+					<img src="images/arduino-starter-kit.jpg" class="stretch"/>
+					<aside class="notes">
+						What's great with arduino is that it is cheap and really easy to find. There are many efficient providers available on internet like adafruit, DFRobot, SeeedStudio. They provide an incredible amount of modules! Order and two days later you will receive at home your new toy.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Understand programming</h2>
+					<p>
+						Many open source software are dedicated to learn programming to kids : Scratch, TurtleLogo, KidsRuby, Python4Kids...
+					</p>
+					<p>
+						Initiatives : Programatoo, Devoxx4Kids, greenlight, coding goûter...
+					</p>
+					<aside class="notes">
+						To understand the world the kids have also to learn programming. Many different initiatives are arising to learn programming to kids. Theses movements use many different kind of software : open source software or proprietary software. The most famous, TurtleLogo is for the eldest ones. More recently, Scratch has become more popular. These tools have different approaches.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Text</h2>
+					<aside class="notes">
+						In TurtleLogo kids write text to move a small turtle cursor in order to draw shapes. No graphical UI, very simple language. They learn the concepts of programming and understand that a program is just a suite of instructions.
+					</aside>
+					<img src="images/logo.png" class="stretch"/>
+				</section>
+				<section>
+					<h2>Graphical</h2>
+					<img src="images/scratch.png" class="stretch"/>
+					<aside class="notes">
+						In Scratch you drag and drop elements from a palette to animate a character. This tool is a complete IDE which allows kids to create cartoons, video games, movies... This tool provides a more graphical UI. Kids have to assemble puzzle pieces which are instructions to describe a program.
+					</aside>
+				</section>
+				<section>
+					<h2>Program the real world</h2>
+					<img src="images/scratch4arduino.jpg" class="stretch"/>
+					<aside class="notes">
+						These tools are great to learn what programming is. It exists other kind of tools that allows kid to program the real world by interacting with sensors and actuators. Open source tools like Scratch4Arduino or Ardublock provide UIs for simple programming of the Arduino platform. Thanks to these tools, kids can develop a software, upload and run it on hardware platforms. 
+					</aside>
+				</section>
+				<section>
+					<h2>Eclipse IDE for developpers</h2>
+					<p>
+Complex UI, concepts (perspectives, project lifecycle...), languages (Java, C)  
+					</p>
+					<img src="images/eclipse.jpg" class="stretch"/>
+					<aside class="notes">
+						Eclipse is one of the most famous IDE. It has million of users all over the world. So what we could imagine is that kids could use it also to learn programming. But if we give them the original Eclipse IDE, it seems that the Eclipse UI and the default available languages as Java or C are to complex for kids to discover programming.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Turning Eclipse into an IDE for kids</h2>
+					<p>
+						Graphical programming & light UI
+					</p>
+					<aside class="notes">
+						The idea was to develop a prototype to allow kids to create small program. Our first actions were to simplify the UI, the project lifecycle and to provide a graphical block language to be able to develop simple programs and run them on electronic modules. The purpose is not to provide a complete IDE but a tool giving the possibility to discover the effects a software program could have on electronic modules. 
+					</aside>
+				</section>
+				<section>
+					<h2>A simplified UI</h2>
+					<p>
+						No menu, only a  toolbar with 4 buttons activated according to what is possible
+					</p>
+					<img src="images/Arduino_Designer.png" style="width=300px"/>
+					<aside class="notes">
+						The UI of  the Arduino designer defines no menu just one toolbar with 4 different buttons to : manage the project, define the hardware modules used and to define the software that would be uploaded on the hardware platform.
+					</aside>
+				</section>
+				<section>
+					<h2>Dashboard</h2>
+						<ol>The process :
+							<li>Define connections between hardware platform and modules</li>
+							<li>Describe the sketch</li>
+							<li>Upload on the target</li>
+						</ol>
+					<img src="images/dashboard.png" class="stretch"/>
+					<aside class="notes">
+						A dashboard helps the kid by indicating what is the next step in the process development. The process is really simple in fact. The kid must describe the connection between the hardware modules. Then he describes the software and finally he uploads it to the target.
+					</aside>
+				</section>
+				
+				<section>
+					<h2>Hardware</h2>
+					<p>
+						Platform, Modules, Wire
+					</p>
+					<img src="images/hardware.png" class="stretch"/>
+					<aside class="notes">
+						First step, the kid defines the hardware platform he is using and the different sensors and actuators he connects to the Arduino. 
+					</aside>
+				</section>
+
+				<section>
+					<h2>Sketch</h2>
+					<img src="images/sketch.png" class="stretch"/>
+					<aside class="notes">
+						Software written using Arduino are called sketches. Then the kid describes the sketch which represents the software that would run on the hardware platform. And finally, he uploads the sketch to the target. 
+					</aside>
+				</section>
+				<section>
+					<h2>Prototype based on DFRobot Ardublock kit</h2>
+					<p>
+						Sensors : ambient light, infrared , sound, push button, rotation
+					</p>
+					<p>
+						Actuators : LEDs, micro servo motors, fan, music player shield
+					</p>
+					<img src="images/ardublock-kit.jpg" class="stretch"/>
+					<aside class="notes">
+						For the prototype I will demonstrate, I am going to use the DFRobot ardublock kit which contains: ambient light sensor, infrared sensor, sound sensor, push buttons, rotation sensor. It has some servo motors and we also bought a fan and a music player shield. By default the kit contains also an I/O extension shield.
+					</aside>
+				</section>
+				<section>
+					<h2>Hello world</h2>
+					<p>
+						Blink a LED!
+					</p>
+					<img src="images/hello_world.jpg" class="stretch"/>
+					<aside class="notes">
+				       	For the first demo, I will create a small "hello world" sketch to blink a LED.
+    					</aside>
+				</section>
+				<section>
+					<h2>Graphical block-based language</h2>
+					<ul>
+					<li>Structures : while, repeat, if</li>
+					<li>Functions : delay</li>
+					<li>Hardware modules : Status, Level, Sensor</li>
+					<li>Variables</li>
+					<li>Constants</li>
+					<li>Mathematical operators</li>
+					</ul>
+					<aside class="notes">
+					As you can see in the Arduino designer palette, I defined a simple graphical block based language. With this language its possible to create instructions like while, repeat or if instructions. Then it is possible to use functions like delay and to reference hardware modules. It is also possible to create variables and constants and some mathematical operators. For this prototype I decided to create a low level language which is still close to the Arduino language but we could imagine to provide higher level functions.
+					</aside>
+				</section>
+
+				<section>
+					<h2>Sirius</h2>
+					<p>
+						A tool to quickly define DSL based <strong>custom multi-view workbenches</strong> with dedicated representations
+					</p>
+					<img src="images/logo_Sirius.svg" class="stretch"/>
+
+					<aside class="notes">
+				       	To develop the graphical designers I used Sirius. Sirius is a new project in Eclipse to quickly define multi view workbenches based on DSL with dedicated representations.
+    					</aside>
+				</section>
+				<section>
+					<h2>Why using Sirius ?</h2>
+						<ul>
+							<li>For the tool <em>development</em> phase : Dynamic & iterative (live) development</li>
+							<li>For <em>kids</em> : Tooling adapted to the development of small Arduino projects</li>
+						</ul>
+
+					<aside class="notes">
+				       	So why am I using Sirius?
+					During the prototype development phase, it allows me to develop really quickly an arduino specific modeler. I choose it also because I am used to work with Sirius in my daily work, and I just want to develop with Sirius something cool.
+					For the kids, they get a tooling completely adapted to the development of small arduino projects and simple to use.
+    					</aside>
+				</section>
+				<section>
+					<h2>Arduino designer development</h2>
+					<h3>Step 1 - Arduino DSL</h3>
+					<p>
+						DSL describing what are Arduino hardware modules and sketches
+					</p>
+					<img src="images/metamodel.png" class="stretch"/>
+					<aside class="notes">
+				       	First step in the development of the arduino designer : I defined a new DSL specific to Arduino which allows me to describe Arduino hardware and software sketches.
+    					</aside>
+				</section>
+				<section>
+					<h2>Arduino designer development</h2>
+					<h3>Step 2 - Arduino diagram specification</h3>
+					<p>
+						Sirius specification
+					</p>
+					<img src="images/vsm.png" class="stretch"/>
+					<aside class="notes">
+				       	Second step, I defined the different kinds of representations I wanted. Then I mapped the different concepts defined in Arduino metamodel to graphical elements and defined the different tools provided by the designer palette.
+    					</aside>
+				</section>
+				<section>
+					<h2>Arduino designer development</h2>
+					<h3>Step 3 - Code generator</h3>
+					<p>
+						Generate ino files with Acceleo
+					</p>
+					<pre><code data-trim>
+int brightness;
+void setup() {
+  brightness=0;
+}
+void loop() {
+ while ((brightness<255))
+ {
+  brightness=(brightness+1);
+  analogWrite(11,255-(brightness));
+  delay(8);
+ }
+ while ((brightness>1))
+ {
+  brightness=(brightness-1);
+  analogWrite(11,255-(brightness));
+  delay(8);
+ }
+ delay(200);
+}
+					</code></pre>
+					<aside class="notes">
+					Next step was to develop a small generator with Acceleo to generate from Arduino's model the sketch. In Arduino, sketches are saved with the file extension .ino. The Arduino language is based on C/C++. It links against AVR Libc and allows the use of any of its functions. The AVR Libc package provides a subset of the standard C library for Atmel AVR microcontrollers like Arduino. If we have a look to the generated code : we can see that Arduino programs can be divided in three main parts: structure (setup, loop, if, repeat, while...), values (variables and constants), and functions (pinMode, digitalWrite, analogRead...). The setup() function is called when a sketch starts. It is used to initialize variables, pin modes, start some libraries, etc. The setup function will only run once, after each powerup or reset of the Arduino board. After generating the setup() function, my generator create a loop() function. This loops consecutively, allowing the program to change and respond.
+    					</aside>
+				</section>
+				<section>
+					<h2>Arduino designer development</h2>
+					<h3>Step 4 - Integrate Arduino compiler and target uploader</h3>
+					<p>Use Arduino IDE to get well packaged tools</p>
+					<p>
+ 						avr-gcc, avrdude
+					</p>
+					<aside class="notes">
+					When you use the Arduino environment the compile and upload actions are directly integrated. Here as I want to integrate the generation and the compilation of ino files in my Eclipse application, I searched how to compile and upload Arduino programs from the command line.
+					To be able to upload the code on the target, I also installed avr-gcc which is a cross-compiler for the AVR chip that runs the Arduino and avrdude. avrdude is a very handy utility for loading code onto AVR microcontrollers. As Arduino ships with its own bootloader, it is possible to load and run code using only a single USB cable connecting the computer to the board.
+					Uploading the code on the hardware platform is then really easy. My Eclipse upload action has just to call the avrdude command.
+    					</aside>
+				</section>
+				<section>
+					<h2>Use sensor</h2>
+					<p>
+						A LED + push button
+					</p>
+					<img src="images/push_button.jpg" class="stretch"/>
+					<aside class="notes">
+				       	For the next demo, I will use a LED and connect it to a push button in order to switch on/off the LED according to the button is pressed or not.
+    					</aside>
+				</section>
+				<section>
+					<h2>Fade light</h2>
+					<p>
+						1 LED + programming language
+					</p>
+					<img src="images/fade_light.jpg" class="stretch"/>
+					<aside class="notes">
+				       	The next example demonstrates how to change the brightness of a LED in order to get a fading light.
+    					</aside>
+				</section>
+				<section>
+					<h2>Function</h2>
+					<p>
+						LED blinker
+					</p>
+					<img src="images/led_blinker.png" class="stretch"/>
+					<aside class="notes">
+				       	The next example demonstrates how to define a blinker LED to be able to reuse a function.
+    					</aside>
+				</section>
+				<section>
+					<h2>A more complex project</h2>
+					<p>
+						A pet robot
+					</p>
+					<img src="images/cat-robot.jpg" class="stretch"/>
+					<aside class="notes">
+				       	As you can see the Arduino designer allows to develop really simple projects. But thanks to the different function I already demonstrates I am able to build more complex projects. So why not to build a robot.
+    					</aside>
+				</section>
+				<section>
+					<h2>Tigger</h2>
+					<aside class="notes">
+				       	I want to present you my new electronic cat.
+    					</aside>
+					<img src="images/tigger.png" class="stretch"/>
+				</section>
+				<section>
+					<h2>Many sensors and actuators</h2>
+					<img src="images/push_button2.jpg"/>
+					<img src="images/infrared.jpg"/>
+					<img src="images/servo.jpg"/>
+					<p><img src="images/dfrduino_uno.jpg"/></p>
+					<img src="images/led.jpg"/>
+					<img src="images/sound_sensor.jpg"/>
+					<img src="images/fan.jpg"/>
+					<aside class="notes">
+				       	He is made of many sensors and actuators.
+    					</aside>
+				</section>
+				<section>
+					<h2>Recycled high tech composite</h2>
+					<p>
+					<img src="images/carton.jpg"/>
+					<img src="images/scotch.jpg"/>
+					</p>
+					<aside class="notes">
+				       	To built him, I decided to use high tech composite materials coming from my trash can. So he is made of carton and lots of scotch tape.
+					So what this electronical cat is able to do ?
+    					</aside>
+				</section>
+				<section>
+					<h2>Touch</h2>
+					<p>
+						Push button nose commands a blinking necklace
+					</p>
+					<img src="images/touch.jpg" class="stretch"/>
+					<aside class="notes">
+					He can feel when you pushed is button nose and that will command its blinking necklace.
+   					</aside>
+				</section>
+				<section>
+					<h2>See</h2>
+					<p>
+						Infrared sensor eye commands the servo-motored tail
+					</p>
+					<img src="images/see.jpg" class="stretch"/>
+					<aside class="notes">
+					He can see and that will command its servo-motored tail.
+   					</aside>
+				</section>
+				<section>
+					<h2>Hear</h2>
+					<p>
+						Sound sensor ear commands the bubble machine
+					</p>
+					<img src="images/bubbles.jpg" class="stretch"/>
+					<aside class="notes">
+					He can ear sound and that will command its bubble machine. The bubble machine is composed by a servo that commands the bubble stick and a fan. As the fan needs 12v and the Arduino could provide only 5v, we added a battery and a small circuit to energize the fan.
+   					</aside>
+				</section>
+				<section data-background="images/sirius.jpg">
+					<h2 style="color:white;">More "Sirius" presentations</h2>
+					<p><a href="http://eclipse.org/sirius/">http://eclipse.org/sirius/</a></p>
+					<aside class="notes">
+					You can see more Sirius presentation that will give more detail on how Sirius works and what you can do with it on the Sirius website.
+   					</aside>
+				</section>
+				<section>
+					<h2>Find the code ?</h2>
+					<p>
+						<a href="https://github.com/mbats/arduino">https://github.com/mbats/arduino</a>
+                                        </p>
+					<img src="images/where.jpg" class="stretch"/>
+					<aside class="notes">
+					You can find the code of what I present you on my github account in the arduino repository.
+   					</aside>
+				</section>
+				<section>
+					<h2>Find the products and the documentation ?</h2>
+					<p>Soon : download the products for windows and linux</p>
+					<p>
+						<a href="https://github.com/mbats/arduino/wiki">https://github.com/mbats/arduino/wiki</a>
+                                        </p>
+					<aside class="notes">
+					You will find soon products for windows and Linux on my github. And documentation is available on the github wiki of the Arduino repository. You will find there all the examples, tutorials and explanation about how to contribute to this project.
+   					</aside>
+				</section>
+				<section>
+					<h2>Thanks! Questions?</h2>
+					<h3>
+						Clap your hands to make more bubbles!
+						And maybe ask questions...
+					</h3>
+					<img src="images/bubbles2.jpg" class="stretch"/>
+				</section>
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

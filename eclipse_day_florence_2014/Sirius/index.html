@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Sirius : build diagram, table and tree editors in 20 minutes!</title>
+
+		<meta name="description" content="Sirius : build diagram, table and tree editors in 20 minutes!">
+		<meta name="author" content="Mélanie Bats">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+			<section data-background="./images/sirius.jpg">
+					<h2>Sirius</h2>
+					<h3>Build diagram, table and tree editors in 20 minutes!</h3>
+					<p>
+						<small>Mélanie Bats / <a href="http://www.obeo.fr">Obeo</a></small>
+					</p>
+					<aside class="notes">
+				        Hi, I'm Melanie Bats and I work as software developer at Obeo. 
+					I'm here to present you the Sirius project and how it can help you to create very quickly your own graphical modelers.
+    					</aside>
+				</section>
+			<section data-background="./images/sirius.jpg">
+					<h2>Your domain, your language, your representation</h2>
+					<p>
+						Each domain as its own specific vocabulary :
+						<ul>
+							<li>Textual</li>
+							<li>Graphical</li>
+						</ul>
+					</p>
+					
+					<aside class="notes">
+				        Each domain has its specific language and defines its own representations.
+					These representations can take many different textual or graphical forms.
+    					</aside>
+				</section>
+				<section data-transition="none">
+					<h2>Business Process</h2>
+					<a class="test" href="http://marketplace.obeonetwork.com/module/bpmn">
+						<img height="60%" src="./images/bpmn.png" alt="BPMN"/>
+					</a>
+					
+					<aside class="notes">
+				        Here we can see how business process could be represented thanks to BPMN diagram.
+    					</aside>
+				</section>
+				<section data-transition="none">
+					<h2>System engineering</h2>
+					<a class="test" href="http://marketplace.obeonetwork.com/market/system-engineering">
+						<img height="60%" src="./images/system_engineering.png" alt="System engineering"/>
+					</a>
+
+					<aside class="notes">
+				       	For system engineering another vocabulary is defined with its dedicated diagrams.
+    					</aside>
+				</section>
+				<section data-transition="none">
+					<h2>Software</h2>
+					<a class="test" href="http://marketplace.obeonetwork.com/module/uml">
+						<img height="60%"src="./images/uml.png" alt="UML"/>
+					</a>
+					
+					<aside class="notes">
+				       	In software domain, the developers use UML, to represent software structure and behaviour.
+    					</aside>
+				</section>
+				<section data-transition="none">
+					<h2>Safety</h2>
+					<a class="test" href="http://marketplace.obeonetwork.com/module/risk-analysis">
+						<img height="250"src="./images/safety.png" alt="Safety"/>
+						<img height="250"src="./images/safety_table.png" alt="Safety"/>
+					</a>
+
+					<aside class="notes">
+				       	In risk analysis domain, people needs other kinds of representations like table or accident scenario diagrams.
+    					</aside>
+				</section>
+				<section data-background="./images/phone.jpg">
+					<h2>Domain Specific Language</h2>
+					<p>
+						Improve the <strong>communication</strong>
+					</p>
+
+					<aside class="notes">
+				       	So as we saw on the previous slides, one domain means one dedicated language and specific representations. The purpose of domain specific language is mainly to improve the communication. But giving a common language is not enough, what people needs is...
+    					</aside>
+				</section>
+				<section data-background="./images/easy.jpg">
+					<h2>DSL based tools</h2>
+					<ul>
+						<li>Are easy to take in hand</li>
+						<li>Guide the user to the right way</li>
+					</ul>
+					<aside class="notes">
+				       	 ...tools adapted to their own DSL. These tools are easier to take in hand as the users already know the vocabulary. So they have more chanced to be well received by the end user. Even better, these kind of dedicated tools guide the users thanks to workflows and help them to produce valid models and so valid systems.
+    					</aside>
+ 
+				</section>
+	
+				<section>
+					<h2>A bit of history</h2>
+					<img src="./images/history.jpg"/>
+					<aside class="notes">
+				       	Height years ago, Thales tried to work with UML and try to adapt the notation by developing their own UML profiles. 
+    					</aside>
+				</section>
+				<section data-transition="linear">
+					<h2>Thales previous experiences with UML profiling</h2>
+					<ul>
+						<li>Poor adoption</li>
+						<li>Metamodels constrained by UML concepts</li>
+						<li>Representations constrained by existing UML diagrams</li>
+					</ul>
+					<img height="350" src="./images/uml.jpg"/>
+
+					<aside class="notes">
+				       	The result of this was a poor adoption by their users. Because, as they were mainly system engineers, they don't know anything about UML. So for them it was another new language to learn. And with it, they couldn't represents all the concepts they needs. Even worth for them, the resulting representations were constrained by the existing UML diagrams which do not fit their expectations.
+    					</aside>	
+				</section>
+				<section data-transition="linear" data-background="./images/freedom.jpg">
+					<h2>Needs for DSLs</h2>
+					<ul>
+						<li>More freedom in representations</li>
+						<li>Heavier and more technical developments</li>
+						<li>Originally 2 or 3 foreseen modeling tools</li>
+					</ul>
+					
+					<aside class="notes">
+				       	So they conclude that they need DSLs. They were aware that using DSL means developing new adapted tools which results in heavier and more technical developments. They came to see Obeo and asked us for a tool to get more "freedom" in the representations. At this moment, they imagined to develop 2 or 3 different workbenches.  
+    					</aside>
+				</section>
+				<section data-background="./images/sirius.jpg">
+					<h2>Sirius in a nutshell</h2>
+					<p>
+						
+					<ul><li>
+						A tool to quickly define DSL based <strong>custom multi-view workbenches</strong> with dedicated representations
+					</li>
+					<li>
+						Based on Eclipse <em>Modeling</em> Technologies : no need to be an expert for most uses
+					</li>
+					<li>
+						<em>New</em> Eclipse Project : but already <em>proven</em> technology
+					</li></ul>					
+					</p>
+
+					<aside class="notes">
+				       	The result of this collaboration is "Sirius". In a nutshell, Sirius allows you to create very quickly multi-view graphical workbenches. You can create modelers based on shapes, trees and tables. It works with any EMF compatible data model. Sirius is based on many modeling technologies like EMF and GMF Runtime but you do not need to be an expert of these technologies to use it and get a working modeler. Indeed, one of the purpose of Sirius is to bring all the cool stuff existing in the Eclipse Modeling technologies to the masses and package them in an easy to use way.
+    					</aside>
+				</section>
+				<section data-background="./images/eclipse.jpg">
+					<h2>Sirius goes open source</h2>						
+					<p>
+						Released in 2013 as an <strong><a href="http://projects.eclipse.org/projects/modeling.sirius">official Eclipse project</a></strong> 
+					</p>
+
+					<aside class="notes">
+				       	After several years of collaboration, Sirius is now open source. And the first release of Sirius as an official Eclipse project will occured next june with the Luna release train. So, Sirius is both a new Eclipse project, and also a proven and mature techno developped in collaboration by Thales and Obeo for many years now.
+    					</aside>
+				</section>
+				<section data-background="./images/sirius.jpg">
+					<h2>What benefits</h2>
+
+					<p>
+						<ul>
+							<li>For <em>developers</em> : reduce cost & complexity</li>
+							<ul>
+								<li>No need to be an Eclipse modeling expert</li>
+								<li>Dynamic & iterative (live) development</li>
+							</ul>
+						<img height="350" src="./images/vsm_runtime.png"/>
+							<li>For <em>end-users</em> : </li>
+							<ul>
+								<li>Tooling adapted to their needs and workflows</li>
+								<li>Improved experience (compared to raw GMF)</li>
+							</ul>
+						</ul>
+					</p>
+					<aside class="notes">
+					What are the benefits for you if you adopt Sirius ? If you're a developper it reduces drastically the cost and complexity of creating your own modelers. You don't need to be a GMF expert to create a graphical modeler. Sirius provides also a dynamic and iterative way to develop modelers with no code generation. For the end user, he gets a tooling completely adapted to its needs and its workflows, which provides a straightforward user experience.
+    					</aside>
+				</section>
+
+				<section data-background="./images/action.jpg">
+					<h2>Sirius in action</h2>
+					<p>
+						Eclipse 4.3 (Kepler)</br>
+						Sirius 1.0.0 M7
+					</p>
+
+					<aside class="notes">
+					For the demo, I will use an Eclipse Kepler in which I installes the Sirius 1.0.0 M7.
+    					</aside>
+				</section>
+				<section>
+					<h2>What the customer wants</h2>
+					<img height="500" src="./images/drawing.png"/>
+
+					<aside class="notes">
+					Imagine that I have a customer which drew this on the whiteboard.
+					He is a project manager and he wants a tool to manage his software projects. My customer needs to represent software versions, tasks, tasks associated to versions and finally he wants to assign tasks to developers.
+    					</aside>
+				</section>
+
+				<section data-background="./images/sirius.jpg">
+					<h2>Two parts for two kinds of users</h2>
+					<p>
+						Specification Environment : Specifier/Developer
+					</p>
+					<p>
+						Runtime Environment : End-user
+					</p>
+					<aside class="notes">
+					How does it works ? There are two different parts corresponding to two kind of users. 
+    					</aside>
+				</section>
+				<section data-background="./images/sirius.jpg">
+					<h2>Specification Environment</h2>
+					<p>
+						<ul>
+							<li>Define custom multi-view workbenches : Diagrams, Tree, Tables</li>
+							<li>With <em>little technical knowledge</em></li>
+							<li>Get a working modeler fast : <em>instant feedback</em></li>
+							<li>Highly customizable : native tooling, Java or extension points</li>
+						</ul>
+						<img height="350" src="./images/vsm.png">
+					</p>
+					<aside class="notes">
+					First, the specification environment, is used by the developer of the modeler to define how the final modeler will work and what it will look.
+    					</aside>
+				</section>
+				<section data-background="./images/sirius.jpg">
+					<h2>Runtime Environment</h2>
+					<p>
+						<ul>
+							<li>Work with data models: not just a drawing tool</li>
+							<li>Executes the specification : <em>No code generation</em></li>
+							<li>Environment <em>adapted</em> to user needs (Viewpoint-based)</li>
+							<li><em>Viewpoint</em>-based</li>
+							<li><em>Simplified workflow</em> : Modeling Project</li>
+						</ul>
+						<img height="350" src="./images/runtime.png">
+					</p>
+					<aside class="notes">
+					Using a modeling workbench based on Sirius means for the end user that : 
+* He works with models and not just a drawing tool which means that he could use the data for other purposes.
+* He has a good feeling working with the modeler as it is adapted to its needs.
+
+The Sirius runtime environment is installed on the end-user machine and his role is to execute the specification you defined. It interprets the configuration file and there is no code generation or any other intermediate step, it is purely dynamic.
+    					</aside>
+				</section>
+				
+				<section>
+					<h2>Who already uses Sirius ?</h2>
+					<ul>
+						<li>Thales</li>
+						<li>Embedded in Obeo Designer and Obeo SmartEA (proprietary) products for 4 years</li>
+						<li>Open source modelers on Github and the Eclipse marketplace : UML, SysML, TOGAF...</li>
+						<li>And now...you!
+						<ul>
+							<li>Integration builds for v0.9 available now</li>
+							<li>Version v1.0 planned for Eclipse 4.4 (Luna)</li>
+						</ul>
+						</li>
+					</ul>
+					<img height="350" src="./images/roadmap.png"/>
+
+					<aside class="notes">
+					Today Sirius is already used by Thales which has deployed it in many units.
+It is also used in our products like :
+<ul><li> Obeo Designer</li>
+<li> and Obeo SmartEA which is a modeler dedicated to enterprise architecture.</li></ul>
+It is also used in several open source modelers on the Eclipse marketplace as in UML Designer and SysML Designer. Although, I encourage you to dowload the UML Designer product on the Obeo Website.
+Finally, YOU can be also a Sirius user. Just download the v1.0 milestone and give it a try today. As you can see on the roadmap, the first release of Sirius as official Eclipse project and as part of the Eclipse Luna release train is planned for june.
+    					</aside>
+				</section>
+				<section data-background="./images/sirius.jpg">
+					<h2>3 things to remember about Sirius</h2>
+					<ol>
+						<li class="fragment">
+							<ul>A full-featured environment to create custom modelers
+								<li>Easy to use</li>
+								<li>Fast, iterative (live) development</li>							
+							</ul>
+						</li>
+						<li class="fragment">
+							<ul>Mature, many deployments
+								<li>Inside <em>Thales</em> and elsewhere via <em>Obeo Designer</em></li>
+							</ul>
+						</li>
+						<li class="fragment">
+							<ul>Official Eclipse project
+								<li>around 8 full-time commiters</li>
+								<li>v1.0 soon in Luna</li>
+							</ul>
+						</li>
+					</ol>
+					<aside class="notes">
+					If you have to keep something from this presentation, remember :
+					That Sirius is a full-featured environment to create custom modelers
+					It is mature and deployed in many places.
+					And better, it is open source.
+    					</aside>
+				</section>
+				<section data-background="./images/question.jpg">
+					<h1>Thank you!</h1>
+					<p>
+						<ul>
+							<li>Project web site : <a href="http://www.eclipse.org/sirius">http://www.eclipse.org/sirius</a></li>
+							<li>How to get started : <a href="http://wiki.eclipse.org/Sirius/Getting_Started">http://wiki.eclipse.org/Sirius/Getting_Started</a></li>
+							<li>Forum : <a href="http://www.eclipse.org/forums/eclipse.sirius">http://www.eclipse.org/forums/eclipse.sirius</a></li>
+						</ul>
+					</p>
+					<a href="mailto:melanie.bats@obeo.fr">melanie.bats@obeo.fr</a>
+					<aside class="notes">
+					Thanks for your attention!
+					Do you have any questions ?
+    					</aside>
+				</section>
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+					// { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
